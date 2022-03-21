@@ -387,7 +387,7 @@ h3.texto-central b{
 
 /* Boxes Novo Estilo */
 .box-info{
-	width: 100%;
+	/*width: 100%;*/
 	display: flex;
 	padding: 5%;
 }
