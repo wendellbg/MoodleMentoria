@@ -1,0 +1,142 @@
+.details, .show, .hide:target {
+  display: none;
+}
+
+.hide:target + .show, .hide:target ~  .details {
+  display: inline-block;
+  width: 100%;
+}
+.hide{
+  display: inline-block;
+  width: 100%;
+}
+
+
+.menu-opcoes {
+  background: #2A5CAA;
+  color: #FFF;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fec13b;
+  border-left: none;
+  border-top: none;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.details {
+  border-top: 3px solid #fec13b;
+  color:#fff;
+  padding: 15px 0;
+  margin-top: 15px;
+  /*padding: 10px;*/
+  width: 100%;
+  height: 100%;
+}
+
+.menu-opcoes a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-opcoes a:hover {
+  color: #fec13b;
+}
+
+
+.menu-opcoes .show{
+  color: #fec13b;
+  font-size: 20px;
+}
+
+.menu-opcoes .show:hover{
+  opacity: 0.6;
+  color: #fff;
+  transition-delay: 0.3ms;
+}
+
+
+.menu-opcoes.red {
+  background: #E6292E;
+  border-right: 3px solid #020E36;
+  border-bottom: 3px solid #020E36;
+}
+
+.menu-opcoes.red .show {
+  color: #020E36;
+}
+
+.menu-opcoes.red .details {
+  border-top: 3px solid #020E36;
+  background: #E6292E;
+}
+
+.menu-opcoes.red a:hover {
+  color: #020E36;
+}
+
+.menu-opcoes.darkblue-red {
+  background: #020E36;
+  border-right: 3px solid #E6292E;
+  border-bottom: 3px solid #E6292E;
+}
+
+.menu-opcoes.darkblue-red .show {
+  color: white;
+}
+
+.menu-opcoes.darkblue-red .details {
+  border-top: 3px solid #E6292E;
+  background: #020E36;
+}
+
+.menu-opcoes.darkblue-red a:hover {
+  color: #E6292E;
+}
+
+
+
+
+/** Mooc 3**/
+.menu-opcoes.orange {
+  background: #151730;
+  border-right: 3px solid #FF841D;
+  border-bottom: 3px solid #FF841D;
+}
+
+.menu-opcoes.orange .show {
+  color: white;
+}
+
+.menu-opcoes.orange .details {
+  border-top: 3px solid #FF841D;
+  background: #151730;
+}
+
+.menu-opcoes.orange a:hover {
+  color: #FF841D;
+}
+
+
+
+/** Mooc 5**/
+.menu-opcoes.dark {
+  background: #151730;
+  border-right: 3px solid #fec13b;
+  border-bottom: 3px solid #fec13b;
+}
+
+.menu-opcoes.dark .show {
+  color: white;
+}
+
+.menu-opcoes.dark .details {
+  border-top: 3px solid #fec13b;
+  background: #151730;
+}
+
+.menu-opcoes.dark a:hover {
+  color: #fec13b;
+}
