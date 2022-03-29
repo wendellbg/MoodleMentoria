@@ -85,11 +85,11 @@ ul {
     width: 90%;
     color: #fff;
     background-color: #2a5caa;
-    font-size: 20px;
+    /*font-size: 20px;*/
     /*border: 1px solid #2a5caa;*/
     border-radius: 8px;
     font-weight: bold;
-    padding: 5px 10px;
+    /*padding: 5px 10px;*/
     vertical-align: middle;
 }
 
@@ -170,4 +170,10 @@ ul {
 
 .lista-topicos font-musket{
     font-family: "Musket-bold";
+}
+
+.lista-topicos li span{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px 15px;
 }

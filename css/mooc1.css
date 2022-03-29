@@ -1,7 +1,7 @@
 @import url(padrao.css?ver=1.3);
 @import url(boxes.css?ver=1.3);
-@import url(fontes.css?ver=1.3);
-@import url(efeito.css?ver=1.3);
+/*@import url(fontes.css?ver=1.3);*/
+@import url(efeito.css?ver=1.4);
 
 body{
 	background-color: #eeeeee;
@@ -332,4 +332,14 @@ h3.texto-central b{
 	font-family: 'Font Awesome 5 Free';
     font-weight: 900;	
 	content: "\f022  ";
+}
+
+
+.box,
+.content,
+.generalbox,
+.book_content{
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
 }
