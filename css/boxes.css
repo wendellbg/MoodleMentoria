@@ -535,7 +535,7 @@ h3.texto-central b{
 
 .image.border-blue{
 	border: 3px solid #2a5caa;
-	border-radius: 8px;
+	border-radius: 8px !important;
 	padding: 10px;
 	width: 90% !important;
 	margin: 0 auto !important;
