@@ -23,7 +23,7 @@
   border-left: none;
   border-top: none;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .details {
@@ -48,7 +48,7 @@
 
 .menu-opcoes .show{
   color: #fec13b;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .menu-opcoes .show:hover{
