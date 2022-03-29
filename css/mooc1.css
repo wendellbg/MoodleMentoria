@@ -9,7 +9,9 @@ body{
 	/*background-size: contain !important;*/
 }
 
-a {
+.box a,
+.generalbox a,
+.book_content a{
 	color: #2a5caa;
 }
 
@@ -334,9 +336,7 @@ h3.texto-central b{
 	content: "\f022  ";
 }
 
-
 .box,
-.content,
 .generalbox,
 .book_content{
 	font-size: 14px;
