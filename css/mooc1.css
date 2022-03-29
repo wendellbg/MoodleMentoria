@@ -1,6 +1,7 @@
-@import url(padrao.css?ver=1.2);
-@import url(boxes.css?ver=1.2);
-/*@import url(fontes.css?ver=1.2);*/
+@import url(padrao.css?ver=1.3);
+@import url(boxes.css?ver=1.3);
+@import url(fontes.css?ver=1.3);
+@import url(efeito.css?ver=1.3);
 
 body{
 	background-color: #eeeeee;
