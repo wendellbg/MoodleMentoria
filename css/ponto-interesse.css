@@ -1,0 +1,1109 @@
+/* --------------------------------
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.ponto-imagem.cd-container{
+  width: 100%;
+}
+
+.cd-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-img-replace {
+  /* replace text with background images */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+.cd-product {
+  text-align: center;
+}
+
+.cd-product-wrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  /*max-width: 450px;*/
+}
+.cd-product-wrapper > img {
+  display: block;
+  border-radius: 8px;
+}
+
+.cd-single-point {
+  position: absolute;
+  border-radius: 50%;
+}
+.cd-single-point > a {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: inherit;
+  background: #d95353; /* #2a5caa */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.cd-single-point > a::after, .cd-single-point > a:before {
+  /* rotating plus icon */
+  content: '';
+  /*content: url("../img/padrao/icon_hand.png") ;*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #ffffff;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.cd-single-point > a::after {
+  height: 2px;
+  width: 12px;
+}
+.cd-single-point > a::before {
+  height: 12px;
+  width: 2px;
+}
+
+@media screen and (max-width: 560px) {
+  .cd-single-point > a {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+.cd-single-point::after {
+  /* this is used to create the pulse animation */
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: transparent;
+  -webkit-animation: cd-pulse 2s infinite;
+  -moz-animation: cd-pulse 2s infinite;
+  animation: cd-pulse 2s infinite;
+}
+
+.cd-single-point.is-open > a {
+  background-color: #475f74;
+}
+.cd-single-point.is-open > a::after, .cd-single-point.is-open > a::before {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  transform: translateX(-50%) translateY(-50%) rotate(135deg);
+}
+.cd-single-point.is-open::after {
+  /* remove pulse effect */
+  display: none;
+}
+.cd-single-point.is-open .cd-more-info {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s, -moz-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+}
+.cd-single-point.visited > a {
+  background-color: #475f74;
+}
+.cd-single-point.visited::after {
+  /* pulse effect no more active on visited elements */
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .cd-single-point.is-open .cd-more-info.cd-left {
+    right: 140%;
+  }
+  .cd-single-point.is-open .cd-more-info.cd-right {
+    left: 140%;
+  }
+  .cd-single-point.is-open .cd-more-info.cd-top {
+    bottom: 140%;
+  }
+  .cd-single-point.is-open .cd-more-info.cd-bottom {
+    top: 140%;
+  }
+}
+
+@-webkit-keyframes cd-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0.8);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0);
+  }
+}
+@-moz-keyframes cd-pulse {
+  0% {
+    -moz-transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0.8);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0.8);
+  }
+  100% {
+    -moz-transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0);
+  }
+}
+@keyframes cd-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    box-shadow: inset 0 0 2px 2px rgba(217, 83, 83, 0.8);
+  }
+  50% {
+    box-shadow: inset 0 0 2px 2px rgba(217, 83, 83, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+    box-shadow: inset 0 0 2px 2px rgba(217, 83, 83, 0);
+  }
+}
+.cd-single-point .cd-more-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: left;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2em 1em 1em;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+}
+.cd-single-point .cd-more-info::before {
+  /* triangle next to the interest point description - hidden on mobile */
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  display: none;
+  border: 8px solid transparent;
+}
+.cd-single-point .cd-more-info h2 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  margin-bottom: .6em;
+  line-height: 25px;
+}
+.cd-single-point .cd-more-info p {
+  color: #758eb1;
+  text-align: left;
+}
+@media only screen and (min-width: 600px) {
+  .cd-single-point .cd-more-info {
+    position: absolute;
+    width: 260px;
+    height: 250px;
+    padding: 1em;
+    overflow-y: visible;
+    line-height: 1.4;
+    border-radius: 0.25em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .cd-single-point .cd-more-info::before {
+    display: block;
+  }
+  .cd-single-point .cd-more-info.cd-left, .cd-single-point .cd-more-info.cd-right {
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .cd-single-point .cd-more-info.cd-left::before, .cd-single-point .cd-more-info.cd-right::before {
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .cd-single-point .cd-more-info.cd-left {
+    right: 160%;
+    left: auto;
+  }
+  .cd-single-point .cd-more-info.cd-left::before {
+    border-left-color: rgba(255, 255, 255, 0.95);
+    left: 100%;
+  }
+  .cd-single-point .cd-more-info.cd-right {
+    left: 160%;
+  }
+  .cd-single-point .cd-more-info.cd-right::before {
+    border-right-color: rgba(255, 255, 255, 0.95);
+    right: 100%;
+  }
+  .cd-single-point .cd-more-info.cd-top, .cd-single-point .cd-more-info.cd-bottom {
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .cd-single-point .cd-more-info.cd-top::before, .cd-single-point .cd-more-info.cd-bottom::before {
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .cd-single-point .cd-more-info.cd-top {
+    bottom: 160%;
+    top: auto;
+  }
+  .cd-single-point .cd-more-info.cd-top::before {
+    border-top-color: rgba(255, 255, 255, 0.95);
+    top: 100%;
+  }
+  .cd-single-point .cd-more-info.cd-bottom {
+    top: 160%;
+  }
+  .cd-single-point .cd-more-info.cd-bottom::before {
+    border-bottom-color: rgba(255, 255, 255, 0.95);
+    bottom: 100%;
+  }
+  .cd-single-point .cd-more-info h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+  .cd-single-point .cd-more-info p {
+    font-size: 18px;
+    /*font-size: 0.875rem;*/
+    line-height: 20px;
+  }
+}
+
+/* close the interest point description - only on mobile */
+.cd-close-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 44px;
+  width: 44px;
+}
+.cd-close-info::after, .cd-close-info:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  background-color: #475f74;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.cd-close-info::after {
+  height: 2px;
+  width: 16px;
+}
+.cd-close-info::before {
+  height: 16px;
+  width: 2px;
+}
+@media only screen and (min-width: 600px) {
+  .cd-close-info {
+    display: none;
+  }
+}
+
+/* Pontos com Imagem */
+.ponto-imagem .cd-single-point > a::after,
+.ponto-imagem .cd-single-point > a:before {
+  content: unset !important;
+}
+
+.ponto-imagem .cd-single-point > a{
+  width: 70px;
+  height: 70px;
+  background: #ffffff !important;
+}
+
+.ponto-imagem  .cd-single-point .cd-more-info{
+  width: 400px;
+}
+
+
+@media screen and (max-width: 560px) {
+  .ponto-imagem .cd-single-point > a {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .ponto-imagem  .cd-single-point .cd-more-info{
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+/* Pontos com Imagem Infografico 1*/
+.ponto-imagem.infografico1 .cd-single-point > a{
+  width: 180px;
+  height: 180px;
+  background: #FEC13B !important;
+}
+
+.ponto-imagem.infografico1 .cd-single-point > a:hover{
+  width: 190px;
+  height: 190px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.ponto-imagem.infografico1 .cd-single-point .cd-more-info li{
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: 15px;
+  color: #758eb1;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.ponto-imagem.infografico1 .cd-single-point .cd-more-info ul{
+  margin-top: 15px;
+}
+
+.ponto-imagem.infografico1 .cd-single-point .cd-more-info{
+  width: 650px;
+  height: 250px;
+}
+
+.ponto-imagem.infografico1 .ponto3-uni3-tela4 .cd-more-info{
+  height: 350px;
+}
+
+@media screen and (max-width: 560px) {
+  .ponto-imagem.infografico1 .cd-single-point > a {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .ponto-imagem.infografico1 .ponto3-uni3-tela4 .cd-more-info,
+  .ponto-imagem.infografico1 .cd-single-point .cd-more-info{
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+
+/* Pontos com Imagem Infografico 2*/
+
+.ponto-imagem.infografico2 .cd-single-point > a{
+  width: 80px;
+  height: 80px;
+  background: #FEC13B !important;
+}
+
+.ponto-imagem.infografico2 .cd-single-point > a:hover{
+  width: 90px;
+  height: 90px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.ponto-imagem.infografico2 .cd-single-point .cd-more-info{
+  width: 450px;
+}
+
+
+/* Mooc2 Uni2 Tela 7 */
+.border .cd-single-point .cd-more-info{
+  width: 300px;
+  height: 250px;
+}
+
+/* Mooc2 Uni3 Tela 5 */
+.mooc2-uni3-tela5 .cd-single-point .cd-more-info{
+  width: 400px;
+  height: 150px;
+}
+
+/* Mooc3 Uni2 Tela 2 */
+.mooc3-uni2-tela2 .cd-single-point .cd-more-info{
+  width: 400px;
+  height: 300px;
+}
+
+/* Mooc3 Uni5 Tela 6 */
+.small .cd-single-point .cd-more-info{
+  width: 250px;
+  height: 120px;
+}
+
+/* Mooc5 Uni3 Tela 7 */
+.mooc5-uni3-tela7 .cd-single-point .cd-more-info{
+  width: 400px;
+  height: 200px;
+}
+
+/* Mooc5 Uni4 Tela 3 */
+.mooc5-uni4-tela3 .cd-single-point .cd-more-info{
+  width: 440px;
+  height: 250px;
+}
+
+/* Mooc5 Uni4 Tela 5 */
+.mooc5-uni4-tela5 .cd-single-point .cd-more-info{
+  width: 400px;
+  height: 250px;
+}
+
+/* Mooc5 Uni3 Tela 3 */
+.mooc5-uni3-tela3 .cd-single-point .cd-more-info{
+  width: 400px;
+  height: 250px;
+}
+
+
+@media screen and (max-width: 560px) {
+  .ponto-imagem.infografico2 .cd-single-point > a {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .border .cd-single-point .cd-more-info,
+  .mooc5-uni3-tela7 .cd-single-point .cd-more-info,
+  .mooc2-uni3-tela5 .cd-single-point .cd-more-info,
+  .mooc5-uni4-tela5 .cd-single-point .cd-more-info,
+  .mooc5-uni4-tela3 .cd-single-point .cd-more-info,
+  .small .cd-single-point .cd-more-info,
+  .ponto-imagem.infografico2 .cd-single-point .cd-more-info{
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+/* Posição dos Pontos */
+.cd-single-point.ponto1-uni1-tela3{
+  top: 34%;
+  left: 25%;
+}
+
+.cd-single-point.ponto2-uni1-tela3{
+  bottom: 48%;
+  right: 46%;
+}
+
+.cd-single-point.ponto3-uni1-tela3{
+  top: 15%;
+  right: 29%;
+}
+
+.cd-single-point.ponto1-uni1-tela4{
+  top: 5%;
+  left: 5%;
+}
+
+.cd-single-point.ponto2-uni1-tela4{
+  top: 40%;
+  left: 5%;
+}
+
+.cd-single-point.ponto3-uni1-tela4{
+  top: 75%;
+  left: 5%;
+}
+
+
+.cd-single-point.ponto1-uni3-tela4{
+  top: 14%;
+  left: 16%;
+}
+
+.cd-single-point.ponto2-uni3-tela4{
+  bottom: 15%;
+  right: 44%;
+}
+
+.cd-single-point.ponto3-uni3-tela4{
+  top: 33%;
+  right: 15%;
+}
+
+.cd-single-point.ponto1-uni4-tela4{
+  top: 13%;
+  right: 1%;
+}
+
+.cd-single-point.ponto2-uni4-tela4{
+  top: 31%;
+  right: 1%;
+}
+
+.cd-single-point.ponto3-uni4-tela4{
+  top: 48%;
+  right: 1%;
+}
+
+.cd-single-point.ponto1-uni4-tela11{
+  top: 10%;
+  right: 5%;
+}
+
+.cd-single-point.ponto2-uni4-tela11{
+  top: 30%;
+  right: 5%;
+}
+
+.cd-single-point.ponto3-uni4-tela11{
+  top: 50%;
+  right: 5%;
+}
+
+.cd-single-point.ponto4-uni4-tela11{
+  top: 70%;
+  right: 5%;
+}
+
+.cd-single-point.ponto1-uni5-tela4{
+  top: 6%;
+  left: 24%;
+}
+
+.cd-single-point.ponto2-uni5-tela4{
+  bottom: 35%;
+  left: 10%;
+}
+
+.cd-single-point.ponto3-uni5-tela4{
+  top: 30%;
+  left: 41%;
+}
+
+.cd-single-point.ponto4-uni5-tela4{
+  bottom: 10%;
+  left: 43%;
+}
+
+.cd-single-point.ponto5-uni5-tela4{
+  bottom: 18%;
+  right: 15%;
+}
+
+.cd-single-point.ponto6-uni5-tela4{
+  top: 17%;
+  right: 8%;
+}
+
+.cd-single-point.ponto1-uni3-tela5{
+  top: 8%;
+  right: 47%;
+}
+
+.cd-single-point.ponto2-uni3-tela5{
+  top: 44%;
+  right: 8%;
+}
+
+.cd-single-point.ponto3-uni3-tela5{
+  bottom: 10%;
+  right: 28%;
+}
+
+.cd-single-point.ponto4-uni3-tela5{
+  bottom: 10%;
+  left: 32%;
+}
+
+.cd-single-point.ponto5-uni3-tela5{
+  top: 43%;
+  left: 8%;
+}
+
+.cd-single-point.ponto1-uni2-tela7{
+  top: 20%;
+  left: 35%;
+}
+
+.cd-single-point.ponto2-uni2-tela7{
+  top: 38%;
+  left: 36%;
+}
+
+.cd-single-point.ponto3-uni2-tela7{
+  bottom: 22%;
+  left: 36%;
+}
+
+.cd-single-point.ponto4-uni2-tela7{
+  top: 28%;
+  right: 36%;
+}
+
+.cd-single-point.ponto5-uni2-tela7{
+  bottom: 25%;
+  right: 36%;
+}
+
+/* Mooc3 Uni2 tela 2*/
+.cd-single-point.ponto1-mooc3-uni2-tela2{
+  top: 10.5%;
+  left: 45.5%;
+}
+
+.cd-single-point.ponto2-mooc3-uni2-tela2{
+  top: 18.5%;
+  right: 34%;
+}
+
+.cd-single-point.ponto3-mooc3-uni2-tela2{
+  top: 35.5%;
+  right: 28.5%;
+}
+
+.cd-single-point.ponto4-mooc3-uni2-tela2{
+  top: 54.5%;
+  right: 28%;
+}
+
+.cd-single-point.ponto5-mooc3-uni2-tela2{
+  top: 72.5%;
+  right: 35.5%;
+}
+
+.cd-single-point.ponto6-mooc3-uni2-tela2{
+  top: 77%;
+  left: 45.5%;
+}
+
+.cd-single-point.ponto7-mooc3-uni2-tela2{
+  top: 72.5%;
+  left: 34%;
+}
+
+.cd-single-point.ponto8-mooc3-uni2-tela2{
+  top: 55.5%;
+  left: 27.5%;
+}
+
+.cd-single-point.ponto9-mooc3-uni2-tela2{
+  top: 35%;
+  left: 27.5%;
+}
+
+.cd-single-point.ponto10-mooc3-uni2-tela2{
+  top: 18%;
+  left: 33.5%;
+}
+
+/* Mooc3 Uni3 tela 3*/
+.cd-single-point.ponto1-mooc3-uni3-tela3{
+  top: 18%;
+  right: 49%;
+}
+
+.cd-single-point.ponto2-mooc3-uni3-tela3{
+  top: 55%;
+  right: 64%;
+}
+
+.cd-single-point.ponto3-mooc3-uni3-tela3{
+  top: 55%;
+  right: 34%;
+}
+
+  /* Mooc3 Uni1 tela 4*/
+.cd-single-point.mooc3-ponto1-uni1-tela4{
+  top: 42%;
+  left: 20%;
+}
+
+.cd-single-point.mooc3-ponto2-uni1-tela4{
+  top: 42%;
+  left: 38%;
+}
+
+.cd-single-point.mooc3-ponto3-uni1-tela4{
+  top: 42%;
+  right: 40%;
+}
+
+.cd-single-point.mooc3-ponto4-uni1-tela4{
+  top: 42%;
+  right: 23%;
+}
+
+/* Mooc3 Uni1 tela 5*/
+.cd-single-point.mooc3-ponto1-uni1-tela5{
+  top: 45%;
+  left: 30%;
+}
+
+.cd-single-point.mooc3-ponto2-uni1-tela5{
+  top: 45%;
+  left: 47%;
+}
+
+.cd-single-point.mooc3-ponto3-uni1-tela5{
+  top: 45%;
+  right: 32%;
+}
+
+/* Mooc3 Uni1 tela 7*/
+.cd-single-point.mooc3-ponto1-uni1-tela7{
+  top: 20%;
+  left: 10%;
+}
+
+.cd-single-point.mooc3-ponto2-uni1-tela7{
+  top: 45%;
+  left: 10%;
+}
+
+.cd-single-point.mooc3-ponto3-uni1-tela7{
+  top: 70%;
+  left: 10%;
+}
+
+/* Mooc3 Uni2 tela 5*/
+.cd-single-point.mooc3-ponto1-uni2-tela5{
+  top: 30%;
+  left: 30%;
+}
+
+
+/* Mooc3 Uni5 tela 6*/
+.cd-single-point.mooc3-ponto1-uni5-tela6{
+  top: 60%;
+  left: 0%;
+}
+
+.cd-single-point.mooc3-ponto2-uni5-tela6{
+  top: 40%;
+  left: 6%;
+}
+
+.cd-single-point.mooc3-ponto3-uni5-tela6{
+  top: 25%;
+  left: 17%;
+}
+
+.cd-single-point.mooc3-ponto4-uni5-tela6{
+  top: 25%;
+  right: 17%;
+}
+
+.cd-single-point.mooc3-ponto5-uni5-tela6{
+  top: 40%;
+  right: 6%;
+}
+
+.cd-single-point.mooc3-ponto6-uni5-tela6{
+  bottom: 14%;
+  left: 26%;
+}
+
+.cd-single-point.mooc3-ponto7-uni5-tela6{
+  bottom: 4%;
+  left: 47%;
+}
+
+.cd-single-point.mooc3-ponto8-uni5-tela6{
+  bottom: 14%;
+  right: 26%;
+}
+
+/* Mooc4 Uni2 tela 6*/
+.cd-single-point.mooc4-ponto1-uni2-tela6{
+  top: 15%;
+  left: 27%;
+}
+
+.cd-single-point.mooc4-ponto2-uni2-tela6{
+  top: 20%;
+  right: 20%;
+}
+
+.cd-single-point.mooc4-ponto3-uni2-tela6{
+  top: 44%;
+  left: 29%;
+}
+
+.cd-single-point.mooc4-ponto4-uni2-tela6{
+  top: 50%;
+  right: 20%;
+}
+
+.cd-single-point.mooc4-ponto5-uni2-tela6{
+  top: 70%;
+  left: 28%;
+}
+
+.cd-single-point.mooc4-ponto6-uni2-tela6{
+  top: 80%;
+  right: 18%;
+}
+
+/* Mooc5 Uni1 tela 7*/
+.cd-single-point.mooc5-ponto1-uni1-tela7{
+  top: 10%;
+  left: 50%;
+}
+
+.cd-single-point.mooc5-ponto2-uni1-tela7{
+  top: 40%;
+  left: 82%;
+}
+
+.cd-single-point.mooc5-ponto3-uni1-tela7{
+  top: 67%;
+  left: 53%;
+}
+
+.cd-single-point.mooc5-ponto4-uni1-tela7{
+  top: 40%;
+  left: 6%;
+}
+
+/* Mooc5 Uni2 tela 7*/
+.cd-single-point.mooc5-ponto1-uni2-tela7{
+  bottom: 37%;
+  right: 25%;
+}
+
+.cd-single-point.mooc5-ponto2-uni2-tela7{
+  bottom: 23%;
+  left: 27%;
+}
+
+.cd-single-point.mooc5-ponto3-uni2-tela7{
+  top: 2%;
+  right: 23%;
+}
+
+.cd-single-point.mooc5-ponto4-uni2-tela7{
+  top: 25%;
+  left: 15%;
+}
+
+/* Mooc5 Uni3 tela 7*/
+.cd-single-point.mooc5-ponto1-uni3-tela7{
+  top: 37%;
+  left: 13%;
+}
+
+.cd-single-point.mooc5-ponto2-uni3-tela7{
+  bottom: 10%;
+  right: 38%;
+}
+
+.cd-single-point.mooc5-ponto3-uni3-tela7{
+  top: 21%;
+  right: 23%;
+}
+
+/* Mooc5 Uni4 tela3 */
+
+.cd-single-point.mooc5-ponto1-uni4-tela3{
+  top: 21%;
+  left: 36%;
+}
+
+.cd-single-point.mooc5-ponto2-uni4-tela3{
+  top: 36%;
+  right: 37%;
+}
+
+.cd-single-point.mooc5-ponto3-uni4-tela3{
+  bottom: 32%;
+  left: 39%;
+}
+
+/* Mooc5 Uni4 tela5 Antigo */
+/*.cd-single-point.mooc5-ponto1-uni4-tela5{*/
+/*  top: 26%;*/
+/*  left: 21%;*/
+/*}*/
+
+/*.cd-single-point.mooc5-ponto2-uni4-tela5{*/
+/*  top: 45.5%;*/
+/*  right: 37%;*/
+/*}*/
+
+/*.cd-single-point.mooc5-ponto3-uni4-tela5{*/
+/*  bottom: 32%;*/
+/*  right: 37%;*/
+/*}*/
+
+/*.cd-single-point.mooc5-ponto4-uni4-tela5{*/
+/*  bottom: 8%;*/
+/*  left: 21%;*/
+/*}*/
+
+/* Mooc5 Uni4 tela5 */
+.cd-single-point.mooc5-ponto1-uni4-tela5{
+  top: 23%;
+  right: 32.5%;
+}
+
+.cd-single-point.mooc5-ponto2-uni4-tela5{
+  top: 39%;
+  left: 31.5%;
+}
+
+.cd-single-point.mooc5-ponto3-uni4-tela5{
+  bottom: 37.5%;
+  right: 33%;
+}
+
+.cd-single-point.mooc5-ponto4-uni4-tela5{
+  bottom: 20%;
+  left: 31.5%;
+}
+
+/* Mooc5 Uni3 tela3 */
+.cd-single-point.mooc5-ponto1-uni3-tela3{
+  top: 35%;
+  right: 32.5%;
+}
+
+.cd-single-point.mooc5-ponto2-uni3-tela3{
+  top: 47%;
+  left: 31.5%;
+}
+
+.cd-single-point.mooc5-ponto3-uni3-tela3{
+  bottom: 36.5%;
+  right: 33%;
+}
+
+.cd-single-point.mooc5-ponto4-uni3-tela3{
+  bottom: 25%;
+  left: 31.5%;
+}
+
+.cd-single-point.mooc5-ponto5-uni3-tela3{
+  bottom: 16%;
+  left: 72.5%;
+}
+
+
+
+.cd-single-point.titulo-bola{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.border.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 100%;
+}
+
+
+/* icones */
+
+.cd-img-replace.icon {
+  text-indent: unset;
+}
+
+.cd-single-point > a.icon::after, .cd-single-point > a.icon:before{
+  background-color: transparent;;
+}
+
+.icon i{
+  margin-top: 12px;
+  color: #fff;
+  font-size: 22px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 560px) {
+  .icon i {
+    margin-top: 9px;
+    font-size: 15px;
+  }
+}
