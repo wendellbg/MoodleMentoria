@@ -1,4 +1,4 @@
-@import url(padrao.css?ver=1.5);
+@import url(padrao.css?ver=1.6);
 @import url(boxes.css?ver=1.4);
 /*@import url(fontes.css?ver=1.3);*/
 @import url(efeito.css?ver=1.4);
@@ -9,7 +9,7 @@ body{
 	/*background-size: contain !important;*/
 }
 
-.box a,
+/*.box a,*/
 .generalbox a,
 .book_content a{
 	color: #2a5caa;
