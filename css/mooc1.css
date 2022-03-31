@@ -1,4 +1,4 @@
-@import url(padrao.css?ver=1.4);
+@import url(padrao.css?ver=1.5);
 @import url(boxes.css?ver=1.4);
 /*@import url(fontes.css?ver=1.3);*/
 @import url(efeito.css?ver=1.4);
@@ -340,7 +340,7 @@ h3.texto-central b{
 .box,
 .generalbox,
 .book_content{
-	font-size: 14px;
-	line-height: 20px;
-	color: #333;
+	font-size: 16px;
+	line-height: 22px;
+	color: #444444;
 }
