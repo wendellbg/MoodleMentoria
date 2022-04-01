@@ -8,6 +8,7 @@
 <!--<link rel="stylesheet" href="https://wendellbg.github.io/MoodleMentoria/css/mooc1.css?ver=1.9">-->
 <!--<link rel="stylesheet" href="https://wendellbg.github.io/MoodleMentoria/css/ponto-interesse.css?ver=1.0">-->
 <link rel="stylesheet" href="css/cards-img.css?ver=1.5" />
+<link rel="stylesheet" href="css/carrossel.css?ver=1.0" />
 <link rel="stylesheet" href="css/ponto-interesse.css?ver=1.0">
 <!--<link rel="stylesheet" href="css/efeito.css?ver=1.0">-->
 <link rel="stylesheet" href="css/mooc1.css?ver=1.2">
@@ -106,7 +107,7 @@
 
 
 <div class="separador">
-    <p class="texto-separador">Clique nos botões sobre a imagem para descobrir aaa asafaf as fsa fasf as as asa :</p>
+    <p class="texto-separador">Clique nos botões sobre a imagem para descobrir:</p>
 </div>
 
 <div class="image fit flush tamanho-50">
@@ -181,7 +182,7 @@
                                 <p>A maioria das cidades brasileiras ainda não possui escolas técnicas ou uma instituição de Educação Profissional</p>
                             </div>
                             <label for="card1" class="button return" aria-hidden="true">
-                                <i class="fas fa-arrow-left"></i>
+                                ⟵
                             </label>
                         </div>
                     </div>
@@ -208,7 +209,7 @@
                                 <p>Em torno de 10% dos alunos do EM estão no ensino técnico. Você faz ideia da proporção em outros países?</p>
                             </div>
                             <label for="card2" class="button return" aria-hidden="true">
-                                <i class="fas fa-arrow-left"></i>
+                                ⟵
                             </label>
                         </div>
                     </div>
@@ -219,6 +220,61 @@
         </div>
 
     </div>
+
+    <hr/>
+
+    <!-- Container do Carrossel-->
+    <div class="carrossel dark">
+        <div class="options">
+            <div class="option active" style="--optionBackground:url(../img/uni1/MOOC1_Uni1_tela3_imagem3.jpg);" role="img" aria-label="Fotografia colorida de um laboratório, dois jovens trabalham próximos a uma mesa, ambos têm pele branca, cabelos castanho-claros e usam óculos de proteção, o da esquerda tem barba farta e usa jaleco azul e o da direita jaleco branco manipula um dosador sobre a mesa. Na parede ao fundo, estantes repletas de utensílios e aparelhagem para laboratório.">
+                <div class="shadow"></div>
+                <div class="label">
+                    <!--							<div class="icon">-->
+                    <!--								<i class="fas fa-info-circle"></i>-->
+                    <!--							</div>-->
+                    <div class="info">
+                        <div class="main">Técnicos em química trabalhando em um laboratório de medicamentos</div>
+                        <div class="sub">Figura 05 - Fonte: Science in HD/Unsplash</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="option" style="--optionBackground:url(../img/uni1/MOOC1_Uni1_tela3_imagem4.jpg);" role="img" aria-label="Duas mãos enluvadas transferem o produto de um vidro escuro de tampa azul para um frasco cinza.">
+                <div class="shadow"></div>
+                <div class="label">
+                    <!--							<div class="icon">-->
+                    <!--								<i class="fas fa-info-circle"></i>-->
+                    <!--							</div>-->
+                    <div class="info">
+                        <div class="main">Técnica em farmácia manipulando medicamentos</div>
+                        <div class="sub">Figura 06 - Fonte: This Engineering/Unsplash</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="option" style="--optionBackground:url(../img/uni1/MOOC1_Uni1_tela3_imagem5.jpg);" role="img" aria-label="Em um ambiente hospitalar, um enfermeiro de pele negra, usa jaleco branco e luvas de cor roxa, aplica medicação em um cateter preso ao peito de um paciente de pele branca, cabelos raspados, usa cavanhaque e bata estampada, está sentado em uma poltrona. Uma mulher de pele branca e cabelos loiros, de jaleco branco e crachá, observa atenta.">
+                <div class="shadow"></div>
+                <div class="label">
+                    <!--							<div class="icon">-->
+                    <!--								<i class="fas fa-info-circle"></i>-->
+                    <!--							</div>-->
+                    <div class="info">
+                        <div class="main">Técnico em enfermagem aplicando medicamento em paciente</div>
+                        <div class="sub">Figura 07 - Fonte: National Cancer Institute/Unsplash</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrossel -->
+    <script>
+        $(".option").click(function(){
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+
+        });
+    </script>
 
 </div>
 
@@ -232,6 +288,10 @@
 <!--<p><iframe src="https://ava.cefor.ifes.edu.br/mod/hvp/embed.php?id=1487712" width="848" height="403" frameborder="0" allowfullscreen="allowfullscreen" title="Exemplo de card interativo"></iframe></p>-->
 <!--<script src="https://ava.cefor.ifes.edu.br/mod/hvp/library/js/h5p-resizer.js" type="text/javascript"></script>-->
 <!--<p><iframe src="https://ava.cefor.ifes.edu.br/mod/hvp/embed.php?id=1577154" width="848" height="403" frameborder="0" allowfullscreen="allowfullscreen" title="Card interativo 2"></iframe></p>-->
+<!--<script src="https://ava.cefor.ifes.edu.br/mod/hvp/library/js/h5p-resizer.js" type="text/javascript"></script>-->
+
+<!--<script src="https://ava.cefor.ifes.edu.br/mod/hvp/library/js/h5p-resizer.js" type="text/javascript"></script>-->
+<!--<p><iframe src="https://ava.cefor.ifes.edu.br/mod/hvp/embed.php?id=1487736" width="848" height="597" frameborder="0" allowfullscreen="allowfullscreen" title="Exemplo de infográfico interativo"></iframe></p>-->
 <!--<script src="https://ava.cefor.ifes.edu.br/mod/hvp/library/js/h5p-resizer.js" type="text/javascript"></script>-->
 </body>
 </html>

@@ -1,0 +1,362 @@
+/*body {*/
+/*	display: flex;*/
+/*	flex-direction: row;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+/*	overflow: hidden;*/
+/*	height: 100vh;*/
+/*	font-family: "Roboto", sans-serif;*/
+/*}*/
+/*.carrossel .credit {*/
+/*	position: absolute;*/
+/*	bottom: 20px;*/
+/*	left: 20px;*/
+/*	color: #000;*/
+/*}*/
+
+
+.carrossel.dark {
+    background-image: url(../img/padrao/bg_slide_dark.png);
+    position: relative;
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 4rem 60px 4rem;
+    /*margin-right: -4rem;*/
+    /*margin-left: -4rem;*/
+    margin-bottom: 40px;
+}
+
+.mooc2 .carrossel.dark {
+    background-image: url(../img/padrao/mooc2/bg_slide_dark.png);
+}
+
+.mooc3 .carrossel.dark {
+    background-image: url(../img/padrao/mooc3/bg_slide_dark.png);
+}
+
+.mooc4 .carrossel.dark {
+    background-image: url(../img/padrao/mooc4/bg_slide_dark.png);
+}
+
+.mooc5 .carrossel.dark {
+    background-image: url(../img/padrao/mooc5/bg_slide_dark.png);
+}
+
+
+.carrossel .options {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 600px;
+    max-width: 900px;
+    width: calc(100% - 100px);
+    height: 400px;
+}
+@media screen and (max-width: 718px) {
+    .carrossel .options {
+        min-width: 520px;
+    }
+    .carrossel .options .option:nth-child(5) {
+        /*display: none;*/
+        min-width: 30px;
+    }
+}
+@media screen and (max-width: 638px) {
+    .carrossel .options {
+        min-width: 440px;
+    }
+    .carrossel .options .option:nth-child(4) {
+        /*display: none;*/
+        min-width: 30px;
+    }
+}
+@media screen and (max-width: 558px) {
+    .carrossel .options {
+        min-width: 360px;
+    }
+    .carrossel .options .option:nth-child(3) {
+        /*display: none;*/
+        min-width: 30px;
+    }
+}
+@media screen and (max-width: 478px) {
+    .carrossel .options {
+        min-width: 280px;
+    }
+    .carrossel .options .option:nth-child(2) {
+        /*display: none;*/
+        min-width: 30px;
+    }
+}
+
+@media screen and (max-width: 558px) {
+    .carrossel .options {
+        min-width: 60px;
+        width: auto;
+    }
+
+    .carrossel .options .option.active .label{
+        /*display: inline;*/
+    }
+
+    .carrossel .options .option .label{
+        display: none;
+    }
+
+    .carrossel .options .option {
+        /*display: none;*/
+        min-width: 15px !important;
+    }
+}
+
+.carrossel .options .option {
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    margin: 10px;
+    background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+    background-size: auto 120%;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.carrossel .options .option:nth-child(1) {
+    --defaultBackground: #2a5caa;
+}
+
+.carrossel .options .option:nth-child(2) {
+    --defaultBackground: #2a5caa;
+}
+
+.carrossel .options .option:nth-child(3) {
+    --defaultBackground: #2a5caa;
+}
+
+.carrossel .options .option:nth-child(4) {
+    --defaultBackground: #2a5caa;
+}
+
+.carrossel .options .option:nth-child(5) {
+    --defaultBackground: #2a5caa;
+}
+
+.carrossel .options .option:nth-child(6) {
+    --defaultBackground: #2a5caa;
+}
+
+.carrossel .options .option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 8px;
+    background-size: cover;
+    /*background-size: auto 100%;*/
+    /*&:active {
+       transform:scale(0.9);
+    }*/
+}
+
+.carrossel .options .option.active .shadow {
+    /*box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;*/
+    box-shadow: inset 0 -150px 150px -150px black, inset 0 -150px 150px -120px black;
+}
+.carrossel .options .option.active .label {
+    bottom: 20px;
+    left: 20px;
+}
+.carrossel .options .option.active .label .info > div {
+    left: 0px;
+    opacity: 1;
+}
+.carrossel .options .option:not(.active) {
+    flex-grow: 1;
+    border-radius: 8px;
+}
+.carrossel .options .option:not(.active) .shadow {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+.carrossel .options .option:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+}
+.carrossel .options .option:not(.active) .label .info > div {
+    left: 20px;
+    opacity: 0;
+}
+.carrossel .options .option .shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.carrossel .options .option .label {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.carrossel .options .option .label .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    color: var(--defaultBackground);
+}
+.carrossel .options .option .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: white;
+    /*white-space: pre;*/
+}
+.carrossel .options .option .label .info > div {
+    position: relative;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+.carrossel .options .option .label .info .main {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+}
+.carrossel .options .option .label .info .sub {
+    transition-delay: 0.1s;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+
+@media screen and (max-width: 718px) {
+
+    .carrossel .options .option .label .info .main {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+    .carrossel .options .option .label .info .sub {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    .carrossel .options .option .label{
+        display: none;
+    }
+
+    .carrossel .options .option.active .label {
+        display: flex;
+    }
+
+    .carrossel .options .option.active .label .icon {
+        display: none;
+    }
+
+    .carrossel.dark {
+        padding: 50px 2rem 60px 2rem;
+    }
+
+}
+
+.carrossel.only-text .options {
+    height: auto;
+    min-height: 400px;
+}
+
+
+.only-text .content-text{
+    padding: 20px;
+    color: #fff;
+    text-align: justify;
+    text-shadow: 0px 0px 2px black;
+}
+
+
+.only-text .content-text h3{
+    color: #fff;
+    font-family: "Musket-bold";
+    font-size: 20px;
+    text-shadow: 0px 0px 4px black;
+    text-align: left;
+}
+
+
+.only-text .content-text ul{
+    list-style: inside;
+    margin-bottom: 30px;
+}
+
+
+.only-text .content-text ul li{
+    margin-bottom: 10px;
+}
+
+.only-text .options .bg-orange{
+    background: linear-gradient(130deg, rgba(2, 14, 54, 0.8), rgba(255, 132, 29, 1));
+}
+
+.only-text .options .bg-orange .label .icon{
+    color: rgba(255, 132, 29, 1);
+}
+
+.only-text .options .bg-yellow{
+    background: linear-gradient(130deg, rgba(2, 14, 54, 0.8), rgba(254, 193, 59, 1));
+}
+
+.only-text .options .bg-yellow .label .icon{
+    color: rgba(254, 193, 59, 1);
+}
+
+
+.only-text .options .bg-red{
+    background: linear-gradient(130deg, rgba(2, 14, 54, 0.8), rgba(230, 41, 46, 1));
+}
+
+.only-text .options .bg-red .label .icon{
+    color: rgba(230, 41, 46, 1);
+}
+
+
+.only-text .options .bg-green{
+    background: linear-gradient(130deg, rgba(2, 14, 54, 0.8), rgba(45, 181, 185, 1));
+}
+
+.only-text .options .bg-green .label .icon{
+    color: rgba(45, 181, 185, 1);
+}
+
+.only-text .options .bg-blue{
+    background: linear-gradient(130deg, rgba(2, 14, 54, 0.8), rgba(42, 92, 170, 1));
+}
+
+.only-text .options .bg-blue .label .icon{
+    color: rgba(42, 92, 170, 1);
+}
+
+
+.only-text .options .option.active .content-text{
+    display: block;
+}
+
+.only-text .options .option:not(.active) .content-text{
+    display: none;
+}
+
+.only-text .icon{
+    font-family: "Musket-bold";
+}
+
+.only-text .options .option.active .label {
+    display: none;
+}
