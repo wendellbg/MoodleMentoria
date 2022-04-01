@@ -5,11 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<link rel="stylesheet" href="https://wendellbg.github.io/MoodleMentoria/css/mooc1.css?ver=1.8">
-<link rel="stylesheet" href="https://wendellbg.github.io/MoodleMentoria/css/ponto-interesse.css?ver=1.0">
+<!--<link rel="stylesheet" href="https://wendellbg.github.io/MoodleMentoria/css/mooc1.css?ver=1.9">-->
+<!--<link rel="stylesheet" href="https://wendellbg.github.io/MoodleMentoria/css/ponto-interesse.css?ver=1.0">-->
+<link rel="stylesheet" href="css/cards-img.css?ver=1.5" />
 <link rel="stylesheet" href="css/ponto-interesse.css?ver=1.0">
 <!--<link rel="stylesheet" href="css/efeito.css?ver=1.0">-->
-<!--<link rel="stylesheet" href="css/mooc1.css?ver=1.1">-->
+<link rel="stylesheet" href="css/mooc1.css?ver=1.2">
 
 <!--<p><link rel="stylesheet" href="https://wendellbg.github.io/MoodleMentoria/css/mooc1.css?ver=1.6" /></p>-->
 <div class="content">
@@ -37,9 +38,9 @@
         <source src="../../downloads/Un1-video.mp3" type="audio/mp3">Seu navegador não suporta HTML5
     </audio>
     <div class="downloads">
-        <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
-        <a target="_blank" href="../../downloads/Un1-video.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
-        <a target="_blank" href="../../downloads/Un1-video.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
+        <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button">Áudio do vídeo com AD )))</button>
+        <a target="_blank" href="../../downloads/Un1-video.pdf"><button class="bt-download-media" type="button">Baixe o texto do vídeo</button></a>
+        <a target="_blank" href="../../downloads/Un1-video.mp3"><button class="bt-download-media" type="button">Baixe o áudio do vídeo</button></a>
     </div>
 </div>
 <hr/>
@@ -153,6 +154,72 @@
 
     <script src="https://wendellbg.github.io/MoodleMentoria/js/jquery-2.1.1.js"></script>
     <script src="https://wendellbg.github.io/MoodleMentoria/js/main.js"></script> <!-- Resource jQuery -->
+
+
+    <hr/>
+
+    <div class="row cards">
+        <div class="2u 12u$(small)">
+        </div>
+
+        <div class="4u 12u$(small)">
+            <div class="card yellow">
+                <input type="checkbox" id="card1" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front">
+                        <div class="inner">
+                            <h2>Há alguma escola técnica na sua cidade?</h2>
+
+                            <label for="card1" class="button" aria-hidden="true">
+                                Clique para virar
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>A maioria das cidades brasileiras ainda não possui escolas técnicas ou uma instituição de Educação Profissional</p>
+                            </div>
+                            <label for="card1" class="button return" aria-hidden="true">
+                                <i class="fas fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="4u 12u$(small)">
+            <div class="card red">
+                <input type="checkbox" id="card2" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front">
+                        <div class="inner">
+                            <h2>Dos 7,5 milhões de alunos do Ensino Médio regular, qual o percentual matriculado em curso técnico?</h2>
+
+                            <label for="card2" class="button" aria-hidden="true">
+                                Clique para virar
+                            </label>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>Em torno de 10% dos alunos do EM estão no ensino técnico. Você faz ideia da proporção em outros países?</p>
+                            </div>
+                            <label for="card2" class="button return" aria-hidden="true">
+                                <i class="fas fa-arrow-left"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="2u 12u$(small)">
+        </div>
+
+    </div>
+
 </div>
 
 

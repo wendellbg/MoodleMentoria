@@ -1,6 +1,6 @@
-@import url(padrao.css?ver=1.6);
+@import url(padrao.css?ver=1.7);
 @import url(boxes.css?ver=1.4);
-/*@import url(fontes.css?ver=1.3);*/
+@import url(colunas.css?ver=1.0);
 @import url(efeito.css?ver=1.4);
 
 body{
