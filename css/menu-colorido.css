@@ -1,0 +1,285 @@
+.menu-colorido-geral{
+    background-color: #ebebeb;
+    font-family: "Musket-Bold";
+    padding: 2%;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.hide, .show{
+    padding: 0.5em;
+    display: inline-block;
+}
+
+.details, .show, .hide:target {
+  display: none;
+}
+
+.hide:target + .show, .hide:target ~  .details {
+  display: block;
+}
+
+.menu-colorido a span{
+    float: right;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.menu-colorido {
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.details {
+  color:#fff;
+  padding: 10px;
+  /*width: 100%;*/
+  /*height: 100%;*/
+}
+
+.menu-colorido a {
+    color: white;
+    text-decoration: none;
+    width: 97%;
+    font-size: 20px;
+    line-height: 24px;
+    transition: background-color .5s;
+}
+
+.menu-colorido .details a {
+    text-decoration: underline;
+    font-size: unset;
+}
+
+.menu-colorido .details a:hover {
+    text-decoration: none;
+    font-size: unset;
+}
+
+
+/* .box1a, .box2a, .box3a, .box4a, .box5a{
+    padding: 1em;
+} */
+
+.box1a, .box1b:hover, .box1c{
+    background: #e73535;
+}
+
+.box1b, .box1a:hover{
+    background: #b70306;
+}
+
+.box2a, .box2b:hover, .box2c{
+    background: #2b5ca9;
+}
+
+.box2b, .box2a:hover{
+    background: #020e36;
+}
+
+.box3a, .box3b:hover, .box3c{
+    background: #3fadac;
+}
+
+.box3b, .box3a:hover{
+    background: #266866;
+}
+
+.box4a, .box4b:hover, .box4c{
+    background: #fdc13c;
+}
+
+.box4b, .box4a:hover{
+    background: #f89106;
+}
+
+.box5a, .box5b:hover, .box5c{
+    background: #ff841d;
+}
+.box5b, .box5a:hover{
+    background: #e16100;
+}
+
+/* DIVS COLORIDAS - TELA 07 */
+
+.divs-coloridas .cor1a, .divs-coloridas .i1:hover .cor1b{
+    background-color: #e73535;
+    color: #fff;    
+    transition: background-color .5s;
+}
+.divs-coloridas .cor1b, .divs-coloridas .i1:hover .cor1a{
+    background-color: #f47177;
+    color: #000;
+}
+
+.divs-coloridas .cor2a, .divs-coloridas .i2:hover .cor2b{
+    background-color: #fdc13c;
+    color: #fff;    
+    transition: background-color .5s;
+}
+.divs-coloridas .cor2b, .divs-coloridas .i2:hover .cor2a{
+    background-color: #fbdc9c;
+    color: #000;
+}
+
+.divs-coloridas .cor3a, .divs-coloridas .i3:hover .cor3b{
+    background-color: #2b5cab;
+    color: #fff;    
+    transition: background-color .5s;
+}
+.divs-coloridas .cor3b, .divs-coloridas .i3:hover .cor3a{
+    background-color: #4e9eff;
+    color: #000;
+}
+
+.divs-coloridas .cor4a, .divs-coloridas .i4:hover .cor4b{
+    background-color: #1b6868;
+    color: #fff;    
+    transition: background-color .5s;
+}
+.divs-coloridas .cor4b, .divs-coloridas .i4:hover .cor4a{
+    background-color: #2db5b9;
+    color: #000;
+    /*background-color: #2a5caa;*/
+    /*color: #ffffff;*/
+}
+
+.divs-coloridas .cor5a, .divs-coloridas .i5:hover .cor5b{
+    background-color: #ff841d;
+    color: #fff;    
+    transition: background-color .5s;
+}
+.divs-coloridas .cor5b, .divs-coloridas .i5:hover .cor5a{
+    background-color: #f9a869;
+    color: #000;
+} 
+
+.divs-coloridas .cor6a, .divs-coloridas .i6:hover .cor6b{
+    background-color: #ff5355;
+    color: #fff;    
+    transition: background-color .5s;
+}
+.divs-coloridas .cor6b, .divs-coloridas .i6:hover .cor6a{
+    background-color: #fba9ad;
+    color: #000;
+} 
+
+.divs-coloridas .cor7a, .divs-coloridas .i7:hover .cor7b{
+    background-color: #b70306;
+    color: #fff;    
+    transition: background-color .5s;    
+}
+.divs-coloridas .cor7b, .divs-coloridas .i7:hover .cor7a{
+    background-color: #ff2444;
+    color: #000;
+} 
+
+.divs-coloridas{
+    border: 3px solid #ccc;
+    font-family: "Musket-Bold";
+    margin-top: 6em;
+    padding-left: 1em ;
+    padding-right: 1em;   
+    margin-bottom: 4em;
+    border-radius: 8px;
+}
+
+.divs-coloridas .item{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+    /*position: relative;*/
+}
+
+ .divs-coloridas .titulo{
+    border-radius: 8px;
+    font-size: 30px;
+    line-height: 34px;
+    width: 100%;
+    padding: 20px;
+    max-height: 150px;
+    padding-right: 65%;
+    margin-bottom: 20px;
+}
+
+/*.divs-coloridas .titulo span{*/
+/*    padding-right: 65%;*/
+/*}*/
+
+.divs-coloridas .item:first-child{
+    margin-top: -3em;
+}
+
+.divs-coloridas .item:last-child{
+    margin-bottom: -3em;
+}
+
+.divs-coloridas .descricao{
+    font-family: "Affogato-Regular";
+    font-size: 20px;
+    line-height: 28px;
+    border-radius: 8px;
+    width: 70%;
+    margin-left: -60%;
+    /*position: absolute;      */
+    padding: 20px;
+    margin-top: 20px;
+    /*right: 0;*/
+    /*top: 0;*/
+}
+
+@media screen and (max-width: 660px) {
+
+    .divs-coloridas .item{
+        display: block;
+    }
+	.divs-coloridas .descricao{
+        width: 90%;
+        margin-left: 10%;
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;;
+    }   
+    .divs-coloridas .titulo{
+        margin-bottom: 0;
+        padding: 20px;
+    }
+    .divs-coloridas .i7 .titulo{
+        padding-bottom: 1em;
+    }
+
+    .divs-coloridas .titulo{
+        border-bottom-right-radius: 0;
+    }
+
+}
+
+
+ /* .divs-coloridas .titulo span{
+    font-size: 1.8em;
+    color: #fff;
+    margin-right: 50%;
+    padding: 0 1em;
+    border: 2px solid yellow;
+}
+
+/* .divs-coloridas .descricao{
+    background-color: pink;
+    margin-left: 45%;
+} */
+
+/* .divs-coloridas .descricao span{
+    font-size: 1.2em;
+} */
+
+/*
+  .divs-coloridas .item div:last-child {
+    border: 1px solid blue;
+    width: 80%;    
+    position: relative;
+    float: right;
+    top: 0;
+    
+    margin-left: 20px;
+  } */
