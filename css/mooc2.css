@@ -1,0 +1,349 @@
+/*@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");*/
+/*@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");*/
+@import url(padrao.css?ver=1.9);
+@import url(boxes.css?ver=1.4);
+@import url(colunas.css?ver=1.0);
+@import url(efeito.css?ver=1.4);
+
+/*body{*/
+/*	background-color: #eeeeee;*/
+/*	!*background-image: url(../img/uni1/bg_mooc1.png);*!*/
+/*	!*background-size: contain !important;*!*/
+/*}*/
+
+/*.box a,*/
+.generalbox a,
+.book_content a{
+	color: #E6292E;
+}
+
+.bt-avanca a{
+	color: #fff;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #E6292E;
+}
+
+
+#header .logo,
+#header .logo h4,
+#header .logo h3 {
+	color: #fff;
+	text-shadow: 0px 0px 5px black;
+	line-height: 25px;
+}
+
+/* Boas Vindas */
+.boas-vindas{
+	background-image: url(../img/padrao/tela01_box_text_darkblue.png);
+}
+
+.caixa-texto-topo {
+	background-image: url(../img/padrao/tela01_box1_red.png);
+}
+
+.caixa-texto-topo p{
+	color: #fff;
+}
+
+.caixa-texto-centro p {
+	color: #fff;
+}
+
+.caixa-texto-rodape {
+	background-image: url(../img/padrao/tela01_box2_red.png);
+}
+.caixa-texto-rodape p {
+	color: #fff;
+}
+
+@media screen and (max-width: 585px) {
+	.caixa-texto-topo,
+	.caixa-texto-rodape{
+		background-color: #E6292E;
+	}
+
+	.caixa-texto-topo:before, .caixa-texto-rodape:before{
+		background-color: #E6292E;
+		border: 3px solid #E6292E;
+	}
+
+	.caixa-texto-rodape{
+		background-color: #E6292E;
+	}
+
+	.caixa-texto-centro{
+		/*background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);*/
+		background-color: #020E36;
+	}
+}
+
+/* Separador */
+.separador {
+	border-top: 2px solid #E6292E;
+}
+
+.separador .texto-separador {
+	background-color: #E6292E;
+	color: white;
+}
+
+
+.content .navegacao h3 {
+	color: #fff;
+	background-color: #E6292E;
+}
+
+/* Footer */
+#footer{
+	background-image: url(../img/padrao/mooc2/bg_footer.png);
+}
+
+.footer .bt-topo{
+	background-color: #7C141E;
+}
+
+
+.footer .bt-topo:hover{
+	background-color: #E6292E;
+}
+
+.footer .bt-topo a{
+	color: #fff;
+}
+
+/* Navegação */
+.bt-navegacao {
+	background-color: #E6292E;
+	color: white;
+}
+
+.bt-navegacao.desativado{
+	background-color: #F7C1C8;
+	color: white;
+}
+
+.botoes-navegacao input[type="radio"] + label:before{
+	border: 1px solid #E6292E;
+}
+
+.botoes-navegacao input[type="radio"]:checked + label:before{
+	background: #E6292E;
+	color: #FFF;
+	border: 2px solid #E6292E;
+}
+
+
+.navegacao .legenda{
+	color: #E6292E;
+}
+
+.bt-avanca {
+	background-color: #E6292E;
+	color: white;
+	/*color: #E6292E;*/
+	/*background-color: #fff;*/
+}
+
+.bt-avanca a{
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+}
+
+.bt-navegacao:hover,
+.bt-avanca a:hover{
+	background-color: #7C141E;
+	color: white;
+}
+
+.botoes-navegacao a:hover input[type="radio"] + label:before{
+	/*background-color: #7C141E;*/
+	background-color: #E6292E;
+}
+
+.bt-avanca.atividades {
+	color: #E6292E;
+	background-color: #fec13b;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.bt-avanca.atividades a {
+	color: #E6292E;
+}
+
+.bt-avanca.atividades:hover a {
+	color: #fec13b;
+}
+
+.bt-avanca.atividades:hover {
+	background-color: #7C141E;
+	border-color: #fff;
+}
+
+
+h3.texto-central{
+	background-color: #2a5caa;
+	background-image: url(../img/padrao/bg_slide_01.jpg);
+}
+
+h3.texto-central b{
+	color: #2a5caa;
+}
+
+.fundo-claro .titulo-video,
+.fundo-claro .titulo-video span{
+	color: #E6292E;
+	text-shadow: none;
+}
+
+.bt-download-media,
+.bt-link-externo{
+	background: #E6292E;
+	color: rgba(255, 255, 255, 0.6);
+}
+.bt-download-media:hover,
+.bt-link-externo:hover{
+	transition: 0.3s;
+	background-color: #7C141E;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.video .downloads .bt-download-media:hover{
+	background-color: #7C141E;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.video .downloads .bt-download-media {
+	background: #931B2C;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mudanças expecificas */
+.slideshow-container{
+	background-image: url(../img/padrao/mooc2/bg_slide_dark.png);
+	background-position: center;
+}
+
+.video {
+	background-image: url(../img/padrao/mooc2/bg_video_dark.png);
+}
+
+.video.fundo-claro{
+	background-image: url(../img/padrao/mooc2/bg_video_02.png);
+	background-size: contain;
+	background-color: transparent;
+}
+
+.hamburguer label{
+	border: 2px solid #E6292E;
+}
+
+.hamburguer:after,
+.hamburguer:before,
+.hamburguer span{
+	background: #E6292E;
+}
+
+.menu a.titulo-menu {
+	text-align: center;
+	width: 100%;
+	color: #E6292E;
+	font-size: large;
+}
+
+.menu a.link-menu-atual {
+	color: #E6292E;
+}
+
+.menu a:hover,
+.menu a.link-menu-atual:hover {
+	background-color: #E6292E;
+	color: #fff;
+}
+
+.mooc2 #change-hamburguer:checked ~ .menu{
+	border: 2px solid #E6292E;
+}
+
+.prev, .next {
+	color: #E6292E;
+}
+
+.mooc2 #header > .logo a {
+	text-shadow: 0px 0px 5px black;
+}
+
+.icone-audio {
+	border: 2px solid #E6292E;
+}
+
+.icone-pause {
+	border: 2px solid #E6292E;
+}
+
+.icone-play:hover {
+	border: 2px solid #E6292E;
+}
+
+.icone-botao-libras {
+	position: fixed;
+	bottom: 2%;
+	left: 1%;
+	padding: 1%;
+	z-index: 10000000;
+}
+
+.audio-gif .icone-play:hover{
+	border: none;
+}
+
+.bt-link-externo{
+	background-color: #020E36;
+}
+
+.bt-link-externo:hover{
+	background-color: #503f74;
+}
+
+.audio-gif .icone-play:hover,
+.audio-gif .icone-play img:hover,
+.audio-gif .icone-pause img:hover{
+	background-color: #E73435;
+}
+
+.botao-referencias a button {
+	border: 2px solid #E6292E;
+	background-color: #E6292E;
+	color: #fff;	
+    border-radius: 10px;
+    margin:0;
+    padding: 10px 15px;
+	cursor: pointer;
+	font-size: 1em;
+	font-family: "Affogato-Regular", sans-serif;
+}
+
+.botao-referencias a button:hover{
+	background-color: #020E36;
+	border-color: #020e36;
+	color: #E6292E;
+	transition: 0.3s;
+  }
+
+  .botao-referencias button:before{
+	font-family: 'Font Awesome 5 Free';
+    font-weight: 900;	
+	content: "\f022  ";
+}
+
+.box,
+.generalbox,
+.book_content{
+	font-size: 16px;
+	line-height: 22px;
+	color: #444444;
+}
