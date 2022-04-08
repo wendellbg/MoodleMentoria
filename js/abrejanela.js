@@ -4,5 +4,5 @@ function abrirJanela(pagina, largura, altura) {
  var topo = (screen.height - altura)/2;
 
  // Abre a nova janela
- minhaJanela = window.open(pagina,'','height=' + altura + ', width=' + largura + ', top=' + topo + ', left=' + -700);
+ minhaJanela = window.open(pagina,'','height=' + altura + ', width=' + largura + ', top=' + topo + ', left=-700' );
 }
