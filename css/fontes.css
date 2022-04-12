@@ -39,13 +39,22 @@ body{
 body h2{
     font-family: "Musket-bold";
 }
-.inner p, .special a{
-    font-family: "Affogato-Regular"; 
-    font-size: 20px;   
-    line-height: 28px;
-}
+/*.inner p, .special a{*/
+/*    font-family: "Affogato-Regular"; */
+/*    font-size: 20px;   */
+/*    line-height: 28px;*/
+/*}*/
 
-.logo a{
+/*.logo a{*/
+/*    font-family: "Affogato-Regular";*/
+/*    font-size: 35px;*/
+/*}*/
+
+/*.box,*/
+/*.content,*/
+.generalbox,
+.book_content{
     font-family: "Affogato-Regular";
-    font-size: 35px;
+    font-size: 20px;
+    line-height: 28px;
 }

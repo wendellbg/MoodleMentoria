@@ -1,9 +1,10 @@
 .menu-colorido-geral{
     background-color: #ebebeb;
     font-family: "Musket-Bold";
-    padding: 1em;
-    font-size: 1.4em;
-    margin-bottom: 2em;
+    padding: 2%;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
 }
 
 .hide, .show{
@@ -21,7 +22,8 @@
 
 .menu-colorido a span{
     float: right;
-    font-size: 1.2em;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .menu-colorido {
@@ -31,16 +33,17 @@
 
 .details {
   color:#fff;
-  padding: 1em;
-  width: 100%;
-  height: 100%;
+  padding: 10px;
+  /*width: 100%;*/
+  /*height: 100%;*/
 }
 
 .menu-colorido a {
     color: white;
     text-decoration: none;
-    width: 100%;
-    font-size: 1.2em;
+    width: 97%;
+    font-size: 20px;
+    line-height: 24px;
     transition: background-color .5s;
 }
 

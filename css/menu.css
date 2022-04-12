@@ -17,13 +17,13 @@
   color: #FFF;
   padding: 15px;
   margin-bottom: 10px;
-  width: 100%;
+  /*width: 100%;*/
   height: 100%;
   border: 3px solid #fec13b;
   border-left: none;
   border-top: none;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .details {
@@ -48,7 +48,7 @@
 
 .menu-opcoes .show{
   color: #fec13b;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .menu-opcoes .show:hover{

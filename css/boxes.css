@@ -387,9 +387,11 @@ h3.texto-central b{
 
 /* Boxes Novo Estilo */
 .box-info{
-	width: 100%;
+	/*width: 100%;*/
 	display: flex;
 	padding: 5%;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 .box-info img {
@@ -533,7 +535,7 @@ h3.texto-central b{
 
 .image.border-blue{
 	border: 3px solid #2a5caa;
-	border-radius: 8px;
+	border-radius: 8px !important;
 	padding: 10px;
 	width: 90% !important;
 	margin: 0 auto !important;
