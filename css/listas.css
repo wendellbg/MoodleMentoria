@@ -1,0 +1,47 @@
+.div-colorida{
+    border: 10px solid #eee;
+    font-family: "Musket-Bold";
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+}
+.div-colorida .item1,
+.div-colorida .item2,
+.div-colorida .item3{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: -20%;
+    width: 140%;
+
+}
+
+.div-colorida .descricao{
+    font-family: "Affogato-Regular";
+    font-size: 20px;
+    line-height: 28px;
+    border-radius: 8px;
+    padding: 20px; 
+    right: 0;
+    top: 0;
+}
+.div-colorida .cor1 {
+    background-color: #e73435;
+    color: #fff; 
+}
+.div-colorida .cor2 {
+    background-color: #2a5caa;
+    color: #fff; 
+}
+.div-colorida .cor3 {
+    background-color: #fec13b;
+    color: #fff; 
+}
+ul { 
+	list-style-type: disc;	
+} 
+li { 
+	list-style-type: disc; 
+	list-style-position: inside; 
+}

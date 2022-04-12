@@ -1,10 +1,10 @@
 @import url(font-awesome.min.css);
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-@import url(padrao.css?ver=1.4);
+@import url(padrao.css?ver=1.5);
 @import url(fontes.css?ver=1.2);
 @import url(menu-top-down.css?ver=1.2);
-@import url(bt-sumario_mooc2.css);
+@import url(bt-sumario_mooc4.css);
 body{
 	background-color: #eeeeee;
 	/*background-image: url(../img/uni1/bg_mooc1.png);*/
@@ -12,11 +12,11 @@ body{
 }
 
 body:after {
-	background-image: url(../img/padrao/mooc2/bg_header.png);
+	background-image: url(../img/padrao/mooc4/bg_header.png);
 }
 
 a {
-	color: #E6292E;
+	color: #2db5b9;
 }
 
 .bt-avanca a{
@@ -25,7 +25,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #E6292E;
+	color: #2db5b9;
 }
 
 
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-topo {
-	background-image: url(../img/padrao/tela01_box1_red.png);
+	background-image: url(../img/padrao/tela01_box1_green.png);
 }
 
 .caixa-texto-topo p{
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-rodape {
-	background-image: url(../img/padrao/tela01_box2_red.png);
+	background-image: url(../img/padrao/tela01_box2_green.png);
 }
 .caixa-texto-rodape p {
 	color: #fff;
@@ -64,52 +64,52 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 585px) {
 	.caixa-texto-topo,
 	.caixa-texto-rodape{
-		background-color: #E6292E;
+		background-color: #2db5b9;
 	}
 
 	.caixa-texto-topo:before, .caixa-texto-rodape:before{
-		background-color: #E6292E;
-		border: 3px solid #E6292E;
+		background-color: #2db5b9;
+		border: 3px solid #2db5b9;
 	}
 
 	.caixa-texto-rodape{
-		background-color: #E6292E;
+		background-color: #2db5b9;
 	}
 
 	.caixa-texto-centro{
-		/*background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);*/
+		/*background-image: url(../img/padrao/mooc4/bg_slide_01.jpg);*/
 		background-color: #020E36;
 	}
 }
 
 /* Separador */
 .separador {
-	border-top: 2px solid #E6292E;
+	border-top: 2px solid #2db5b9;
 }
 
 .separador .texto-separador {
-	background-color: #E6292E;
+	background-color: #2db5b9;
 	color: white;
 }
 
 
 .content .navegacao h3 {
 	color: #fff;
-	background-color: #E6292E;
+	background-color: #2db5b9;
 }
 
 /* Footer */
 #footer{
-	background-image: url(../img/padrao/mooc2/bg_footer.png);
+	background-image: url(../img/padrao/mooc4/bg_footer.png);
 }
 
 .footer .bt-topo{
-	background-color: #7C141E;
+	background-color: #09726f;
 }
 
 
 .footer .bt-topo:hover{
-	background-color: #E6292E;
+	background-color: #2db5b9;
 }
 
 .footer .bt-topo a{
@@ -118,34 +118,34 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navegação */
 .bt-navegacao {
-	background-color: #E6292E;
+	background-color: #2db5b9;
 	color: white;
 }
 
 .bt-navegacao.desativado{
-	background-color: #F7C1C8;
+	background-color: #d5f0f1;
 	color: white;
 }
 
 .botoes-navegacao input[type="radio"] + label:before{
-	border: 1px solid #E6292E;
+	border: 1px solid #2db5b9;
 }
 
 .botoes-navegacao input[type="radio"]:checked + label:before{
-	background: #E6292E;
+	background: #2db5b9;
 	color: #FFF;
-	border: 2px solid #E6292E;
+	border: 2px solid #2db5b9;
 }
 
 
 .navegacao .legenda{
-	color: #E6292E;
+	color: #2db5b9;
 }
 
 .bt-avanca {
-	background-color: #E6292E;
+	background-color: #2db5b9;
 	color: white;
-	/*color: #E6292E;*/
+	/*color: #2db5b9;*/
 	/*background-color: #fff;*/
 }
 
@@ -157,33 +157,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .bt-navegacao:hover,
 .bt-avanca a:hover{
-	background-color: #7C141E;
+	background-color: #09726f;
 	color: white;
 }
 
 .botoes-navegacao a:hover input[type="radio"] + label:before{
-	/*background-color: #7C141E;*/
-	background-color: #E6292E;
+	/*background-color: #09726f;*/
+	background-color: #2db5b9;
 }
 
 .bt-avanca.atividades {
-	color: #E6292E;
-	background-color: #fec13b;
+	color: #2db5b9;
+	background-color: #020E36;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
 }
 
 .bt-avanca.atividades a {
-	color: #E6292E;
+	color: #2db5b9;
 }
 
 .bt-avanca.atividades:hover a {
-	color: #fec13b;
+	color: #151730;
 }
 
 .bt-avanca.atividades:hover {
-	background-color: #7C141E;
-	border-color: #fff;
+	background-color: #09726f;
+	border-color: #020E36;
 }
 
 
@@ -198,97 +198,100 @@ h3.texto-central b{
 
 .fundo-claro .titulo-video,
 .fundo-claro .titulo-video span{
-	color: #E6292E;
+	color: #2db5b9;
 	text-shadow: none;
 }
 
 .bt-download-media,
 .bt-link-externo{
-	background: #E6292E;
+	background: #2db5b9;
 	color: rgba(255, 255, 255, 0.6);
 }
 .bt-download-media:hover,
 .bt-link-externo:hover{
 	transition: 0.3s;
-	background-color: #7C141E;
+	background-color: #09726f;
 	color: rgba(255, 255, 255, 0.9);
 }
 
 .video .downloads .bt-download-media:hover{
-	background-color: #7C141E;
+	background-color: #09726f;
 	color: rgba(255, 255, 255, 0.9);
 }
 
 .video .downloads .bt-download-media {
-	background: #931B2C;
+	background: #269696;
 	color: rgba(255, 255, 255, 0.6);
 }
 
 /* Mudanças expecificas */
-.mooc2 .slideshow-container{
-	background-image: url(../img/padrao/mooc2/bg_slide_dark.png);
+.mooc4 .slideshow-container{
+	background-image: url(../img/padrao/mooc4/bg_slide_dark.png);
 	background-position: center;
 }
 
-.mooc2 .video {
-	background-image: url(../img/padrao/mooc2/bg_video_dark.png);
+.mooc4 .video {
+	/*background-image: url(../img/padrao/mooc4/bg_video_01.jpg);*/
+	/*background-color: #2db5b9;*/
+	background-image: url(../img/padrao/mooc4/bg_video_dark.png);
+	background-position: center;
+	background-size: cover;
 }
 
-.mooc2 .video.fundo-claro{
-	background-image: url(../img/padrao/mooc2/bg_video_02.png);
+.mooc4 .video.fundo-claro{
+	background-image: url(../img/padrao/mooc4/bg_video_02.png);
 	background-size: contain;
-	background-color: transparent;
 }
 
-.mooc2 .hamburguer label{
-	border: 2px solid #E6292E;
+.mooc4 .hamburguer label{
+	border: 2px solid #2db5b9;
 }
 
-.mooc2 .hamburguer:after,
-.mooc2 .hamburguer:before,
-.mooc2 .hamburguer span{
-	background: #E6292E;
+.mooc4 .hamburguer:after,
+.mooc4 .hamburguer:before,
+.mooc4 .hamburguer span{
+	background: #2db5b9;
 }
 
-.mooc2 .menu a.titulo-menu {
+.mooc4 .menu a.titulo-menu {
 	text-align: center;
 	width: 100%;
-	color: #E6292E;
+	color: #2db5b9;
 	font-size: large;
 }
 
-.mooc2 .menu a.link-menu-atual {
-	color: #E6292E;
+.mooc4 .menu a.link-menu-atual {
+	color: #2db5b9;
 }
 
-.mooc2 .menu a:hover,
-.mooc2 .menu a.link-menu-atual:hover {
-	background-color: #E6292E;
+.mooc4 .menu a:hover,
+.mooc4 .menu a.link-menu-atual:hover {
+	background-color: #2db5b9;
 	color: #fff;
 }
 
-.mooc2 #change-hamburguer:checked ~ .menu{
-	border: 2px solid #E6292E;
+.mooc4 #change-hamburguer:checked ~ .menu{
+	border: 2px solid #2db5b9;
 }
 
-.mooc2 .prev, .mooc2 .next {
-	color: #E6292E;
+.mooc4 .prev, .mooc4 .next {
+	color: #2db5b9;
 }
 
-.mooc2 #header > .logo a {
+.mooc4 #header > .logo a {
 	text-shadow: 0px 0px 5px black;
 }
 
-.mooc2 .icone-audio {
-	border: 2px solid #E6292E;
+.mooc4 .icone-audio {
+	border: 2px solid #2db5b9;
 }
 
-.mooc2 .icone-pause {
-	border: 2px solid #E6292E;
+.mooc4 .icone-pause {
+	border: 2px solid #2db5b9;
 }
 
-.mooc2 .icone-play:hover {
-	border: 2px solid #E6292E;
+.mooc4 .icone-play:hover {
+	border: 2px solid #020E36;
 }
 
 .icone-botao-libras {
@@ -299,44 +302,51 @@ h3.texto-central b{
 	z-index: 10000000;
 }
 
-.mooc2 .audio-gif .icone-play:hover{
+.mooc4 .audio-gif .icone-play:hover{
 	border: none;
 }
 
-.mooc2 .bt-link-externo{
+.mooc4 .bt-link-externo{
+	background-color: #2a5caa;
+}
+
+.mooc4 .bt-link-externo:hover{
 	background-color: #020E36;
 }
 
-.mooc2 .bt-link-externo:hover{
-	background-color: #503f74;
+.mooc4 .border-dark-blue .subtitulo{
+	background-color: #2db5b9;
 }
 
-.mooc2 .audio-gif .icone-play:hover,
-.mooc2 .audio-gif .icone-play img:hover,
-.mooc2 .audio-gif .icone-pause img:hover{
-	background-color: #E73435;
+
+.mooc4 .audio-gif .icone-play:hover,
+.mooc4 .audio-gif .icone-play img:hover,
+.mooc4 .audio-gif .icone-pause img:hover{
+	background-color: #2db5b9;
 }
+
 
 .botao-referencias a button {
-	border: 2px solid #E6292E;
-	background-color: #E6292E;
+	border: 2px solid #2db5b9;
+	background-color: #2db5b9;
 	color: #fff;	
     border-radius: 10px;
     margin:0;
-    padding: 10px 15px;
+    padding: 10px 15px;	
+	transition: 0.3s;
 	cursor: pointer;
 	font-size: 1em;
 	font-family: "Affogato-Regular", sans-serif;
 }
 
 .botao-referencias a button:hover{
-	background-color: #020E36;
-	border-color: #020e36;
-	color: #E6292E;
+	background-color: #151730;
+	border-color: #151730;
+	color: #2db5b9;
 	transition: 0.3s;
-  }
+}
 
-  .botao-referencias button:before{
+.botao-referencias button:before{
 	font-family: 'Font Awesome 5 Free';
     font-weight: 900;	
 	content: "\f022  ";

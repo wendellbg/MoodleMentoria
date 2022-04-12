@@ -1,0 +1,165 @@
+.flip-container-1,
+.flip-container-2
+.flip-container-3
+.flip-container-4
+{
+	display: block;
+	perspective: 1000px;
+}
+
+.flipper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition:transform 0.8s; 
+	transform-style: preserve-3d;
+}
+#switch-1:checked ~ .flip-container-1 .flipper,
+#switch-2:checked ~ .flip-container-2 .flipper,
+#switch-3:checked ~ .flip-container-3 .flipper,
+#switch-4:checked ~ .flip-container-4 .flipper {
+	transform: rotateY(180deg);
+}
+
+.front, .back{
+	/*min-height: 550px;*/
+ 	/*position: absolute;*/
+ 	width: 100%;
+ 	height: 100%;
+ 	backface-visibility: hidden;
+}
+.back {
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+}
+#switch-1,
+#switch-2,
+#switch-3,
+#switch-4 {
+	display: none;
+}
+
+
+/*.card-animado{*/
+/*	min-height: 150px;*/
+/*	margin-bottom: 50px;*/
+/*}*/
+
+.card-animado {
+	width: 100%;
+}
+
+.card:hover{
+	border: 4px solid #ffffff;
+	box-shadow: inset 0 0 1em rgba(0,0,0,0.3), 0 0 1em gray;
+	transition-duration: 0.3s;
+}
+
+.card.yellow{
+	background-color: #fec13b !important;
+}
+
+.card.red{
+	background-color: #ff5355 !important;
+}
+
+.card.orange{
+	background-color: #ff841d !important;
+}
+
+.card.blue{
+	background-color: #2a5caa !important;
+}
+
+.card.green{
+	background-color: #9cdde1 !important;
+}
+
+
+.card{
+	max-width: 300px;
+	font-family: "Musket", sans-serif;
+	line-height: 30px;
+	border-radius: 8px;
+	padding: 25px;
+	color: white;
+	font-size: 25px;
+	background-size: 400px;
+	background-repeat: no-repeat;
+	background-image: url(../img/uni1/bg_card.png);
+	background-position: -110px -50px;
+	margin: 0 auto;
+	border: 4px solid #ffffff;
+}
+
+.card-top{
+	min-height: 340px;
+}
+
+.card-bottom{
+	margin-top: 50px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 30px;
+	text-align: center;
+	background-image: url(../img/uni1/bg_card.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	margin-top: 3px;
+}
+
+.back .card{
+	background-size: 450px;
+	background-position: center center !important;
+	text-align: center;
+}
+
+.back .card .card-top{
+	padding-top: 100px;
+}
+
+.back .card .card-top.big-text{
+	padding-top: 50px;
+}
+
+.back .card .card-bottom{
+	background-image: none;
+}
+
+.card:hover{
+	cursor: pointer;
+}
+
+.card img{
+	width: 100%;
+}
+
+.card-img .card {
+	line-height: 25px;
+	font-size: 20px;
+	min-height: 200px;
+	max-width: 400px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+.card-img .card .legenda{
+	text-shadow: 0px 0px 5px black;
+	margin: 0 !important;
+}
+
+
+.card-img .back .card{
+	padding: 25px;
+}
+
+.card-img .back .card .card-top{
+	min-height: 260px;
+}
+
+
+
+

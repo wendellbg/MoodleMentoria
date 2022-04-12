@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Musket-Bold';
+    src:url('../fonts/Musket-Bold.ttf.woff') format('woff'),
+        url('../fonts/Musket-Bold.ttf.svg#Musket-Bold') format('svg'),
+        url('../fonts/Musket-Bold.ttf.eot'),
+        url('../fonts/Musket-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.timeline-geral{    
+    position: relative;
+}
+
+.horizontal-timeline {
+    position: relative;    
+    height: 0;
+    background: #fec13b;
+    margin:0;
+    margin-top: 6vw;
+    padding-top: 1vw;
+    border: 0;
+    border-radius: 3vw;
+    }
+    
+    .arrow-up{
+    position: absolute;
+    width: 2vw;
+    height: 2vw;    
+    background-color: #2a5caa;
+    border: 1.5vw solid #2a5caa;
+    border-radius: 3vw;
+    vertical-align: baseline;
+    top: -1vw;
+    }
+
+    .horizontal-timeline-icones{
+        position: relative;
+        /*height: 1vw;        */
+        /*margin: 12vh 0 6vh 0;    */
+        height: 2vh;
+        margin-top: 12vh;
+
+    }
+    
+     .icone-audio{      
+        border-radius: 2em;          
+        border: 2px solid white;   
+        position: absolute;
+        width: 10vw;
+        height:10vw;
+        margin-left: -2.5vw;      
+        top: -4vw;                
+    }
+
+    .icone-play img{
+        width: 10vw;
+        height:10vw;       
+        border: 2px solid #fff;
+        border-radius: 1em;
+    }
+
+    .icone-pause img{
+        width: 10vw;
+        height:10vw;        
+        border: 2px solid #2a5caa;
+        border-radius: 1em;
+    }
+
+    .icone-audio img:hover{
+        background-color: #ebebeb;
+        border: 2px solid #fec13b;
+        border-radius: 1em;
+        width: 10vw;
+        height:10vw;
+        cursor: pointer;
+    }
+
+    .icone-pause, .icone-play{
+        border: none !important;
+    }
+
+    .legenda-icone{
+        position: absolute;
+        margin-top: -10vh;
+        font-size: 3vw;
+        font-family: "Musket-Bold";
+        
+    }
+    
+#player70, #player80, #player90{
+    position: absolute;
+    top: -2vh;    
+    height: 2vh;    
+    display: inline-block;
+    width: 50vw;    
+    left: 0;
+}
+
+#player70{    
+    margin-left: -10vw;
+}
+
+#player80{
+    margin-left: -24vw;
+}
+
+#player90{
+    margin-left: -38vw;
+}
+
+#player70, #player80, #player90{
+    display: none;
+}
+
+
+
+    

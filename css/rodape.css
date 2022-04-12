@@ -1,0 +1,145 @@
+.content .navegacao {
+  margin-top: 30px; /* elimina excesso de espaço (invés de 70%)*/
+  right: 550px;
+  left: 550px;
+  bottom: 90px;
+  position: static;				
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center; /*centraliza os botões de navegação*/
+  /*padding-left: 200px;
+  padding-right: 200px;*/
+      
+}
+.content .navegacao h3 {
+  color: #fff;
+  text-align: center;
+  background-color: #2a5caa;
+  border-radius: 4px;			
+}
+
+.bt-navegacao {
+	background-color: #2a5caa;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    font-family: "Catamaran", sans-serif;    
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 0px;			
+	}
+
+	.bt-navegacao.desativado{
+		background-color: #BCD0E8;
+		pointer-events: none;
+	}	
+
+	.bt-radio-navega {
+		display: block;
+  		position: fixed;  		
+  		margin-bottom: 12px;
+  		cursor: pointer;
+  		font-size: 22px;	
+	}
+	.botoes-navegacao input {		 
+		 display:none;
+	}
+	
+	.botoes-navegacao label {
+			     cursor: pointer;
+	}
+	
+	.botoes-navegacao input[type="radio"] + label:before{ 
+			   border: 1px solid #2a5caa;
+			   content: "\00a0";    
+			   display: inline-block;    
+			   font: 18px/1em sans-serif;    
+			   height: 12px;
+			   margin: 0 8px;
+			   padding:0;    
+			   vertical-align: center;    
+			   width: 12px;
+			   border-radius:50%;
+		}
+		.botoes-navegacao input[type="radio"]:checked + label:before{
+			background: #2a5caa;    
+			color: #FFF;    
+			border: 1px solid #2a5caa;
+			content: "\00a0";    
+			text-align: center;
+		}		
+   
+
+   .navegacao .legenda{
+	font-weight:600;
+	color: #2a5caa;
+	display: block;
+    margin-top: 1em;
+   }
+
+   .bt-cima {
+      width: 50px;
+  	  height: 50px;     
+      border-color: black;	
+	  background-image: url(../img/uni1/seta-cima.png);
+	  background-size: 50px 50px;
+	  background-color: transparent;   
+   }
+
+   .bt-avanca {
+		/* position: relative; */
+		background-color: #2a5caa;
+		border:none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		font-weight: 400;
+		letter-spacing:0.2em;
+		display: block;		
+		font-size: 1rem;
+		font-family: "Catamaran", sans-serif;    
+		margin: 40px auto;
+		cursor: pointer;
+		border-radius: 12px;
+		/*margin-left: 55px;*/
+	}
+
+   .rodape .coluna-50{
+	   text-align:center;
+   }
+
+   .rodape .coluna-50:first-child{
+	   border-right: 2px solid #cccccc;
+   }
+
+	.rodape .coluna-50 .coluna-50:first-child{
+		border-right: none;
+	}
+
+	@media screen and (max-width: 980px) {
+		.rodape .coluna-50:first-child{
+			border-right: none;
+		}
+
+		.botoes-navegacao input[type="radio"] + label:before {
+			margin: 0 4px;
+		}
+
+		#footer{
+			min-height:0px
+		}
+	}
+
+	.bt-avanca:hover,
+	.bt-navegacao:hover,
+	.botoes-navegacao a:hover input[type="radio"] + label:before{
+		background-color: #020e36;
+		transition: 0.3s;
+	}
