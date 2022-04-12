@@ -176,12 +176,12 @@
 } 
 
 .divs-coloridas{
-    border: 3px solid #ccc;
+    /*border: 3px solid #ccc;*/
     font-family: "Musket-Bold";
-    margin-top: 6em;
-    padding-left: 1em ;
-    padding-right: 1em;   
-    margin-bottom: 4em;
+    margin-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
 }
 
@@ -199,7 +199,7 @@
     width: 100%;
     padding: 20px;
     max-height: 150px;
-    padding-right: 65%;
+    /*padding-right: 65%;*/
     margin-bottom: 20px;
 }
 
