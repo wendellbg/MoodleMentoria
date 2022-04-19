@@ -446,21 +446,22 @@ Main components
   list-style-position: inside;
   margin-bottom: 15px;
   color: #758eb1;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .ponto-imagem.infografico1 .cd-single-point .cd-more-info ul{
   margin-top: 15px;
+  padding-left: 10px;
 }
 
 .ponto-imagem.infografico1 .cd-single-point .cd-more-info{
-  width: 650px;
-  height: 250px;
+  width: 450px;
+  height: 350px;
 }
 
 .ponto-imagem.infografico1 .ponto3-uni3-tela4 .cd-more-info{
-  height: 350px;
+  height: 450px;
 }
 
 @media screen and (max-width: 560px) {
