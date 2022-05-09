@@ -306,6 +306,9 @@ h3.texto-central b{
 	display: block;
 }
 
+.video-player .fluid-width-video-wrapper{
+	position: unset !important;
+}
 
 .titulo-video {
 	margin-bottom: 15px;
