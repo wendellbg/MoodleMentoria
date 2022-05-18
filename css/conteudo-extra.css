@@ -1,0 +1,42 @@
+.conteudo ul li{
+    padding-left: 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.conteudo ul li:before{
+    content: "❯❯  ";
+    color: #fec13b;
+    margin-left: -20px;
+    margin-right:0;
+}
+.conteudo ul{
+    list-style-position: outside;
+}
+
+.conteudo table {
+    /*border: 1px solid #ccc;*/
+}
+
+.conteudo table th{
+    padding: 10px;
+    font-size: x-large;
+    min-width: 100px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.conteudo table td{
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.conteudo table tr:last-child td{
+    border-bottom: 1px solid #ccc;
+}
+
+.conteudo table td:last-child,
+.conteudo table th:last-child{
+    border-right: 1px solid #ccc;
+}
