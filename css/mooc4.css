@@ -225,12 +225,12 @@ h3.texto-central b{
 }
 
 /* Mudanças expecificas */
-.mooc4 .slideshow-container{
+.slideshow-container{
 	background-image: url(../img/padrao/mooc4/bg_slide_dark.png);
 	background-position: center;
 }
 
-.mooc4 .video {
+.video {
 	/*background-image: url(../img/padrao/mooc4/bg_video_01.jpg);*/
 	/*background-color: #2db5b9;*/
 	background-image: url(../img/padrao/mooc4/bg_video_dark.png);
@@ -238,59 +238,59 @@ h3.texto-central b{
 	background-size: cover;
 }
 
-.mooc4 .video.fundo-claro{
+.video.fundo-claro{
 	background-image: url(../img/padrao/mooc4/bg_video_02.png);
 	background-size: contain;
 }
 
-.mooc4 .hamburguer label{
+.hamburguer label{
 	border: 2px solid #2db5b9;
 }
 
-.mooc4 .hamburguer:after,
-.mooc4 .hamburguer:before,
-.mooc4 .hamburguer span{
+.hamburguer:after,
+.hamburguer:before,
+.hamburguer span{
 	background: #2db5b9;
 }
 
-.mooc4 .menu a.titulo-menu {
+ .menu a.titulo-menu {
 	text-align: center;
 	width: 100%;
 	color: #2db5b9;
 	font-size: large;
 }
 
-.mooc4 .menu a.link-menu-atual {
+ .menu a.link-menu-atual {
 	color: #2db5b9;
 }
 
-.mooc4 .menu a:hover,
-.mooc4 .menu a.link-menu-atual:hover {
+ .menu a:hover,
+ .menu a.link-menu-atual:hover {
 	background-color: #2db5b9;
 	color: #fff;
 }
 
-.mooc4 #change-hamburguer:checked ~ .menu{
+ #change-hamburguer:checked ~ .menu{
 	border: 2px solid #2db5b9;
 }
 
-.mooc4 .prev, .mooc4 .next {
+ .prev, .next {
 	color: #2db5b9;
 }
 
-.mooc4 #header > .logo a {
+ #header > .logo a {
 	text-shadow: 0px 0px 5px black;
 }
 
-.mooc4 .icone-audio {
+ .icone-audio {
 	border: 2px solid #2db5b9;
 }
 
-.mooc4 .icone-pause {
+ .icone-pause {
 	border: 2px solid #2db5b9;
 }
 
-.mooc4 .icone-play:hover {
+ .icone-play:hover {
 	border: 2px solid #020E36;
 }
 
@@ -302,26 +302,26 @@ h3.texto-central b{
 	z-index: 10000000;
 }
 
-.mooc4 .audio-gif .icone-play:hover{
+ .audio-gif .icone-play:hover{
 	border: none;
 }
 
-.mooc4 .bt-link-externo{
+ .bt-link-externo{
 	background-color: #2a5caa;
 }
 
-.mooc4 .bt-link-externo:hover{
+ .bt-link-externo:hover{
 	background-color: #020E36;
 }
 
-.mooc4 .border-dark-blue .subtitulo{
+ .border-dark-blue .subtitulo{
 	background-color: #2db5b9;
 }
 
 
-.mooc4 .audio-gif .icone-play:hover,
-.mooc4 .audio-gif .icone-play img:hover,
-.mooc4 .audio-gif .icone-pause img:hover{
+ .audio-gif .icone-play:hover,
+ .audio-gif .icone-play img:hover,
+ .audio-gif .icone-pause img:hover{
 	background-color: #2db5b9;
 }
 
