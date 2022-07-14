@@ -351,3 +351,11 @@ h3.texto-central b{
     font-weight: 900;	
 	content: "\f022  ";
 }
+
+.box,
+.generalbox,
+.book_content{
+	font-size: 16px;
+	line-height: 22px;
+	color: #444444;
+}
