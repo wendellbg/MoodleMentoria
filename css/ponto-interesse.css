@@ -3,6 +3,11 @@
 Modules - reusable parts of our design
 
 -------------------------------- */
+
+.ponto-interesse li{
+  display: block;
+}
+
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
@@ -901,38 +906,38 @@ Main components
 
 /* Mooc4 Uni2 tela 6*/
 .cd-single-point.mooc4-ponto1-uni2-tela6{
-  top: 15%;
-  left: 29%;
+  top: 10%;
+  left: 30%;
 }
 
 .cd-single-point.mooc4-ponto2-uni2-tela6{
   top: 20%;
-  right: 20%;
+  right: 18%;
 }
 
 .cd-single-point.mooc4-ponto3-uni2-tela6{
-  top: 44%;
-  left: 29%;
+  top: 36%;
+  left: 30%;
 }
 
 .cd-single-point.mooc4-ponto4-uni2-tela6{
-  top: 50%;
-  right: 20%;
+  top: 40%;
+  right: 18%;
 }
 
 .cd-single-point.mooc4-ponto5-uni2-tela6{
-  top: 70%;
-  left: 29%;
+  top: 60%;
+  left: 30%;
 }
 
 .cd-single-point.mooc4-ponto6-uni2-tela6{
-  top: 80%;
+  top: 65%;
   right: 18%;
 }
 
 .cd-single-point.mooc4-ponto7-uni2-tela6{
-  top: 90%;
-  left: 29%;
+  top: 82%;
+  left: 30%;
 }
 
 /* Mooc5 Uni1 tela 7*/
