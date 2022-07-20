@@ -902,7 +902,7 @@ Main components
 /* Mooc4 Uni2 tela 6*/
 .cd-single-point.mooc4-ponto1-uni2-tela6{
   top: 15%;
-  left: 27%;
+  left: 29%;
 }
 
 .cd-single-point.mooc4-ponto2-uni2-tela6{
@@ -922,12 +922,17 @@ Main components
 
 .cd-single-point.mooc4-ponto5-uni2-tela6{
   top: 70%;
-  left: 28%;
+  left: 29%;
 }
 
 .cd-single-point.mooc4-ponto6-uni2-tela6{
   top: 80%;
   right: 18%;
+}
+
+.cd-single-point.mooc4-ponto7-uni2-tela6{
+  top: 90%;
+  left: 29%;
 }
 
 /* Mooc5 Uni1 tela 7*/
