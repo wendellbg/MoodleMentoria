@@ -530,6 +530,12 @@ Main components
   height: 120px;
 }
 
+/* Mooc4 Uni3 Tela 3 */
+.mooc4-uni3-tela2 .cd-single-point .cd-more-info{
+  width: 450px;
+  height: 420px;
+}
+
 /* Mooc5 Uni3 Tela 7 */
 .mooc5-uni3-tela7 .cd-single-point .cd-more-info{
   width: 400px;
@@ -562,6 +568,7 @@ Main components
   }
 
   .border .cd-single-point .cd-more-info,
+  .mooc4-uni3-tela2 .cd-single-point .cd-more-info,
   .mooc5-uni3-tela7 .cd-single-point .cd-more-info,
   .mooc2-uni3-tela5 .cd-single-point .cd-more-info,
   .mooc5-uni4-tela5 .cd-single-point .cd-more-info,
@@ -939,6 +946,29 @@ Main components
   top: 82%;
   left: 30%;
 }
+
+/* Mooc4 Uni3 tela 2*/
+.cd-single-point.mooc4-ponto1-uni3-tela2{
+  top: 30%;
+  left: 30%;
+}
+
+.cd-single-point.mooc4-ponto2-uni3-tela2{
+  top: 20%;
+  right: 35%;
+}
+
+.cd-single-point.mooc4-ponto3-uni3-tela2{
+  bottom: 25%;
+  right: 30%;
+}
+
+.cd-single-point.mooc4-ponto4-uni3-tela2{
+  bottom: 20%;
+  left: 35%;
+}
+
+
 
 /* Mooc5 Uni1 tela 7*/
 .cd-single-point.mooc5-ponto1-uni1-tela7{
