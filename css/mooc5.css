@@ -1,21 +1,19 @@
-@import url(font-awesome.min.css);
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-@import url(padrao.css?ver=1.5);
-@import url(fontes.css?ver=1.2);
-@import url(menu-top-down.css?ver=1.2);
-@import url(bt-sumario_mooc5.css);
-body{
-	background-color: #eeeeee;
-	/*background-image: url(../img/uni1/bg_mooc1.png);*/
-	/*background-size: contain !important;*/
-}
+/*@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");*/
+/*@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");*/
+@import url(padrao.css?ver=1.9);
+@import url(boxes.css?ver=1.4);
+@import url(colunas.css?ver=1.0);
+@import url(efeito.css?ver=1.4);
 
-body:after {
-	background-image: url(../img/padrao/mooc5/bg_header.png);
-}
+/*body{*/
+/*	background-color: #eeeeee;*/
+/*	!*background-image: url(../img/uni1/bg_mooc1.png);*!*/
+/*	!*background-size: contain !important;*!*/
+/*}*/
 
-a {
+/*.box a,*/
+.generalbox a,
+.book_content a{
 	color: #020E36;
 }
 
@@ -43,11 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-topo {
-	background-image: url(../img/padrao/tela01_box1.png);
+	background-image: url(../img/padrao/tela01_box1_red.png);
 }
 
 .caixa-texto-topo p{
-	color: #020E36;
+	color: #fff;
 }
 
 .caixa-texto-centro p {
@@ -55,10 +53,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-rodape {
-	background-image: url(../img/padrao/tela01_box2.png);
+	background-image: url(../img/padrao/tela01_box2_red.png);
 }
 .caixa-texto-rodape p {
-	color: #020E36;
+	color: #fff;
 }
 
 @media screen and (max-width: 585px) {
@@ -70,6 +68,10 @@ h1, h2, h3, h4, h5, h6 {
 	.caixa-texto-topo:before, .caixa-texto-rodape:before{
 		background-color: #fec13b;
 		border: 3px solid #fec13b;
+	}
+
+	.caixa-texto-rodape{
+		background-color: #fec13b;
 	}
 
 	.caixa-texto-centro{
@@ -119,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bt-navegacao.desativado{
-	background-color: #D7DDF4;
+	background-color: #F7C1C8;
 	color: white;
 }
 
@@ -151,16 +153,37 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 8px;
 }
 
-.navegacao .bt-navegacao:hover,
-.navegacao .bt-avanca a:hover{
-	background-color: #D8A235;
-	color: #020E36;
+.bt-navegacao:hover,
+.bt-avanca a:hover{
+	background-color: #fec13b;
+	color: white;
 }
 
 .botoes-navegacao a:hover input[type="radio"] + label:before{
-	/*background-color: #BF851D;*/
+	/*background-color: #fec13b;*/
 	background-color: #020E36;
 }
+
+.bt-avanca.atividades {
+	color: #020E36;
+	background-color: #fec13b;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.bt-avanca.atividades a {
+	color: #020E36;
+}
+
+.bt-avanca.atividades:hover a {
+	color: #fec13b;
+}
+
+.bt-avanca.atividades:hover {
+	background-color: #fec13b;
+	border-color: #fff;
+}
+
 
 h3.texto-central{
 	background-color: #020E36;
@@ -186,7 +209,7 @@ h3.texto-central b{
 .bt-download-media:hover,
 .bt-link-externo:hover{
 	transition: 0.3s;
-	background-color: #BF851D;
+	background-color: #fec13b;
 	color: rgba(255, 255, 255, 0.9);
 }
 
@@ -201,47 +224,44 @@ h3.texto-central b{
 }
 
 /* Mudanças expecificas */
-.mooc5 .slideshow-container{
+.slideshow-container{
 	background-image: url(../img/padrao/mooc5/bg_slide_dark.png);
 	background-position: center;
 }
 
-.mooc5 .video {
-	/*background-image: url(../img/padrao/mooc5/bg_video_01.jpg);*/
-	/*background-color: #020E36;*/
+.video {
 	background-image: url(../img/padrao/mooc5/bg_video_dark.png);
-	background-position: center;
-	background-size: cover;
 }
 
-.mooc5 .video.fundo-claro{
+.video.fundo-claro{
 	background-image: url(../img/padrao/mooc5/bg_video_02.png);
 	background-size: contain;
+	background-color: transparent;
 }
 
-.mooc5 .hamburguer label{
+.hamburguer label{
 	border: 2px solid #020E36;
 }
 
-.mooc5 .hamburguer:after,
-.mooc5 .hamburguer:before,
-.mooc5 .hamburguer span{
+.hamburguer:after,
+.hamburguer:before,
+.hamburguer span{
 	background: #020E36;
 }
 
-.mooc5 .menu a.titulo-menu {
+.menu a.titulo-menu {
 	text-align: center;
 	width: 100%;
 	color: #020E36;
 	font-size: large;
 }
 
-.mooc5 .menu a.link-menu-atual {
+.menu a.link-menu-atual {
 	color: #020E36;
 }
 
-.mooc5 .menu a:hover,
-.mooc5 .menu a.link-menu-atual:hover {
+.menu a:hover,
+.menu a.link-menu-atual:hover {
 	background-color: #020E36;
 	color: #fff;
 }
@@ -250,7 +270,7 @@ h3.texto-central b{
 	border: 2px solid #020E36;
 }
 
-.mooc5 .prev, .mooc5 .next {
+.prev, .next {
 	color: #020E36;
 }
 
@@ -258,16 +278,20 @@ h3.texto-central b{
 	text-shadow: 0px 0px 5px black;
 }
 
-.mooc5 .icone-audio {
+.icone-audio {
 	border: 2px solid #020E36;
 }
 
-.mooc5 .icone-pause {
+.icone-pause {
 	border: 2px solid #020E36;
 }
 
 .mooc5 .icone-play:hover {
 	border: 2px solid #fec13b;
+}
+
+.icone-play:hover {
+	border: 2px solid #020E36;
 }
 
 .icone-botao-libras {
@@ -278,11 +302,11 @@ h3.texto-central b{
 	z-index: 10000000;
 }
 
-.mooc5 .audio-gif .icone-play:hover{
+.audio-gif .icone-play:hover{
 	border: none;
 }
 
-.mooc5 .bt-link-externo{
+.bt-link-externo{
 	background-color: #020E36;
 }
 
@@ -291,8 +315,7 @@ h3.texto-central b{
 	color: #020E36;
 }
 
-
-.mooc5 .bt-link-externo:hover{
+.bt-link-externo:hover{
 	background-color: #BF851D;
 	color: #020E36;
 }
@@ -306,116 +329,41 @@ h3.texto-central b{
 	background-color: #020E36;
 }
 
-
-.mooc5 .audio-gif .icone-play:hover,
-.mooc5 .audio-gif .icone-play img:hover,
-.mooc5 .audio-gif .icone-pause img:hover{
+.audio-gif .icone-play:hover,
+.audio-gif .icone-play img:hover,
+.audio-gif .icone-pause img:hover{
 	background-color: #020E36;
-}
-
-
-/* Formulario de upload */
-
-.form-arquivo{
-	border: 3px solid #020E36;
-	border-radius: 8px;
-	width: 80%;
-	margin: 10px auto;
-	padding: 10px;
-	background-color: #FEC13B;
-}
-
-.form-arquivo input[type="submit"]  {
-	border-radius: 8px;
-	width: 200px;
-	padding: 14px 45px;
-	background: #020E36;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
-	cursor: pointer;
-	border: none;
-	margin: 10px auto;
-}
-
-.form-arquivo input[type="submit"]:hover  {
-	background: #D8A235;
-	color: #020E36;
-}
-
-
-.form-arquivo .input-file-container {
-	position: relative;
-	width: 245px;
-	margin: 20px auto;
-}
-.form-arquivo  .input-file-trigger {
-	display: block;
-	padding: 14px 45px;
-	background: #020E36;
-	color: #fff;
-	font-size: 1em;
-	transition: all .4s;
-	cursor: pointer;
-	border-radius: 8px;
-}
-.form-arquivo  .input-file {
-	position: absolute;
-	top: 0; left: 0;
-	width: 245px;
-	opacity: 0;
-	padding: 14px 0;
-	cursor: pointer;
-}
-.form-arquivo  .input-file:hover + .input-file-trigger,
-.form-arquivo  .input-file:focus + .input-file-trigger,
-.form-arquivo  .input-file-trigger:hover,
-.form-arquivo  .input-file-trigger:focus {
-	background: #111d36;
-	color: #fec13b;
-}
-
-.form-arquivo .file-return {
-	margin: 0;
-}
-.form-arquivo .file-return:not(:empty) {
-	margin: 1em 0;
-}
-.form-arquivo  .file-return {
-	font-style: italic;
-	font-size: .9em;
-	font-weight: bold;
-	text-align: center;
-}
-.form-arquivo .file-return:not(:empty):before {
-	content: "Selected file: ";
-	font-style: normal;
-	font-weight: normal;
 }
 
 .botao-referencias a button {
 	border: 2px solid #020E36;
 	background-color: #020E36;
-	color: #fff;	
-    border-radius: 10px;
-    margin:0;
-    padding: 10px 15px;	
-	transition: 0.3s;
+	color: #fff;
+	border-radius: 10px;
+	margin:0;
+	padding: 10px 15px;
 	cursor: pointer;
 	font-size: 1em;
 	font-family: "Affogato-Regular", sans-serif;
 }
 
 .botao-referencias a button:hover{
-	background-color: #d8a235;
-	border-color: #d8a235;
+	background-color: #020E36;
+	border-color: #020e36;
 	color: #020E36;
 	transition: 0.3s;
 }
 
 .botao-referencias button:before{
 	font-family: 'Font Awesome 5 Free';
-    font-weight: 900;	
+	font-weight: 900;
 	content: "\f022  ";
+}
+
+.box,
+.generalbox,
+.book_content{
+	font-size: 16px;
+	line-height: 22px;
+	color: #444444;
 }
